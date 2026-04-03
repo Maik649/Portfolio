@@ -1,0 +1,25 @@
+
+
+
+:root{
+    --primary-color: rgb(255, 252, 243);
+    --secondary-color: rgb(0, 188, 143);
+    --text-color: #252525; 
+    --min-padding: 20px;
+    --middle-padding: 40px;
+    --max-padding: 60px;
+    --min-margin: 20px;
+    --middle-margin: 40px;
+    --max-margin: 60px;
+    --primary-button: #3498db;
+    --primary-button-hover: #2980b9;
+    --secondary-button: rgb(0, 188, 143);   
+    --secondary-button-hover: rgb(255, 252, 243); 
+    --font-family: 'Syne-Bold', 'Syne-Extra', 'Syne-Italic', 'Syne-Mono', 'Syne-Regular', Arial, sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-extra: 800;
+    --font-weight-italic: 400;
+    --font-weight-mono: 400;
+    --font-weight-regular: 400;
+    --limitet-width: 1440px;
+}

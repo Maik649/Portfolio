@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body onload="init()">
+        <header>
+            <div class="header-content-limiter">
+                <div class="logo">
+                    <div class="logo-content">
+                        [<p class="first">M</p>
+                        <p class="last">P</p>]
+                        </div>  
+                </div>
+
+                <div class="header-right">
+                    <div class="launch-toggle">
+                        <button id="launch-button-en">EN</button>
+                        <button id="launch-button-de">DE</button>
+
+                    </div>
+                    <div class="mobile-menu" onclick="navigationToggle()">
+                        <img src="./assets/img/burger menu.png" alt="" id="mobile-menu-icon">
+                    </div>
+                </div>
+                <nav id="navigation" class="navigation">
+                    <ul>
+                        <li><a href="#about-me">About Me</a></li>
+                        <li><a href="#my-skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                    <div class="banner-wrapper">
+                        <div class="banner">
+
+                        </div>
+                        <div class="banner-wrapper-content">
+                            <div class="content-left">
+                                <p>Say Hi!</p>
+                                <span>maik.pankow@gmx.de</span>
+                            </div>
+                            <div class="content-right">
+                                <a href=""><img src="./assets/img/Githup-icon.svg" alt="Profile Picture"></a>
+                                <a href=""><img src="./assets/img/Mail-icon.svg" alt="Profile Picture"></a>
+                                <a href=""><img src="./assets/img/LinkedIn-icon.svg" alt="Profile Picture"></a>
+                            </div>
+                        </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="hero-section">
+                <h1>Hero</h1>
+            </section>
+            <section id="about-me">
+                <h1>About Me</h1>
+            </section>
+            <section id="my-skills">
+                <h1>My Skills</h1>
+            </section>
+            <section id="projects">
+                <h1>Projects</h1>
+            </section>
+            <section id="contact">
+                <h1>Contact</h1>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+
+</html>
