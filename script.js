@@ -2,7 +2,8 @@
 *navigation 
 */
 async function init() {
-await database();
+  await database();
+  loadeImage();
 }
 
  function mobil_menue() {
