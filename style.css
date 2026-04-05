@@ -1,7 +1,3 @@
-@import url('/css/variablen.css' );
-@import url('./css/header-content.css');
-@import url('./css/fonts.css');
-
 
 *{
     box-sizing: border-box;
@@ -11,25 +7,39 @@ body{
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+    background-color: var(--primary-color);
 }
 
 header{
-   
     background-color: var(--primary-color);
     color: white;
     height: 92px;
-    padding: var(--min-padding);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    position: fixed;
 }
 
 section{
-    padding: var(--middle-padding);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    z-index: 0;
+    margin: 0;
+    padding: var(--middle-padding);
+}
+
+section h1{
+    font-size: 48px;
+    color: var(--text-color);
+    width: 300px;
+    padding: 92px 0 0 0;
 }
 
 footer{
+    height: 200px;
+    width: 100%;
+    background-color: var(--footer-color);
     text-align: center;
-    padding: var(--middle-padding);
-    background-color: var(--primary-color);
     color: white;
 }

@@ -22,3 +22,8 @@
     font-family: Syne-Regular;
     src: url('../assets/fonts/Syne-Regular.otf') format("opentype");
 }
+
+@font-face {
+    font-family: overpass-regular;
+    src: url('../assets/fonts/./overpass/overpass-regular.otf') format("opentype");
+}

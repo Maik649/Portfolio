@@ -1,0 +1,128 @@
+.hero-section {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--middle-padding);
+    overflow-x: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: var(--limitet-width);
+    width: 100%;
+   
+}
+
+.hero-section h1 {
+    width: auto;
+    font-size: 164px;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 140px;
+}
+
+.top-headline h1::after {
+    display: block;
+
+    position: relative;
+    left: 19%;
+    content: '';
+    width: 480px;
+    height: 5px;
+    background-color: var(--text-color);
+    margin-top: 60px;
+}
+
+.top-headline p {
+    position: relative;
+    top: -40px;
+    left: 18%;
+    font-size: 48px;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.bottom-headline {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    height: 200px;
+    align-items: center;
+}
+
+.bottom-headline a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Syne Mono', sans-serif;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
+
+.scroll-down-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin:0 60px 0 0;
+}
+
+.scroll-down-btn span {
+    height: 100%;
+    font-size: 24px;
+    font-weight: 100;
+    width: 70px;
+    height: 180px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    position: absolute;
+}
+
+.scroll-down-btn img {
+    position: absolute;
+    width: 56px;
+    height: auto;
+    color: var(--text-color);
+    animation: bounce 3.5s infinite ease-in-out;
+    transition: all 3.5s ease-in-out;
+}
+
+
+@keyframes bounce {
+    0% {
+        display: unset;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-180px);
+    }
+
+    25% {
+        display: inline;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(-80px);
+    }
+
+    50% {
+        display: inline;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(80px);
+    }
+
+    100% {
+        display: inline;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(80px);
+    }
+}
