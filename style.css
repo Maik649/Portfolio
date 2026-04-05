@@ -11,13 +11,14 @@ body{
 }
 
 header{
+    display: flex;
     background-color: var(--primary-color);
     color: white;
     height: 92px;
     width: 100%;
     margin: 0;
     padding: 0;
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
 }
 
@@ -32,7 +33,7 @@ section{
 section h1{
     font-size: 48px;
     color: var(--text-color);
-    width: 300px;
+    width: 400px;
     padding: 92px 0 0 0;
 }
 

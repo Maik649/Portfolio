@@ -19,7 +19,7 @@ nav {
     gap: 0px;
     height: min(100vh - 92px);
     align-items: center;
-    width: 99vw;
+    width: 100%;
 }
 
 .logo div {
