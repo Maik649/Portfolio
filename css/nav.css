@@ -1,3 +1,18 @@
+
+nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 92px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+    border-radius: 0;
+    z-index: 2;
+}
+
 ul {
     list-style: none;
     gap: 20px;
@@ -5,7 +20,7 @@ ul {
     padding: 0;
     z-index: 1000;
     position: relative;
-    bottom: -150px;
+    bottom: -200px;
 }
 
 .navigation li {
@@ -22,11 +37,9 @@ ul {
     display: block;
     text-decoration: none;
     color: var(--text-color);
-    width: 550px;
+    width: 580px;
     height: 167px;
     text-align: center;
-    font-size: 68px;
-    font-weight: var(--font-weight-bold);
 }
 
 .navigation a .icon-links {
@@ -41,7 +54,7 @@ ul {
     position: absolute;
     width: 3px;
     height: 52px;
-    top: 50px;
+    top: 90px;
     left: 0;
     background-color: var(--text-color);
     transition: height 0.1s ease, top 0.1s ease;
@@ -58,8 +71,8 @@ ul {
     position: absolute;
     width: 100%;
     height: 3px;
-    top: 100px;
-    left: 0px;
+    top: 140px;
+    left: 0;
     right: 0;
     background-color: var(--text-color);
     transform: scaleX(0.07);
@@ -93,6 +106,33 @@ ul {
 
     }
 }
+.nav_li_a {
+    display: block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px;
+    height: 503px;
+    width: 100%;
+    font-size: 96px;
+    font-family: var(--font-family-syne-bold);
+    font-weight: var(--font-weight-bold);
+}
+
+.navigation .nav_li_a:active {
+    display: block;
+    position: relative;
+    color: rgb(223, 180, 180);
+    text-decoration: none;
+    text-align: center;
+    padding: 7px;
+    height: 503px;
+    width: 100%;
+    font-size: 96px;
+    font-family: var(--font-family-syne-bold);
+    font-weight: var(--font-weight-bold);
+}
 
 .is-open {
     display: flex;
@@ -107,15 +147,16 @@ ul {
 }
 
 .banner-wrapper {
-    width: 100vw;
+    width: 100%;
     height: auto;
     background: rgb(233, 228, 184);
+    margin: 50px 0;
 }
 
 .banner {
     background: rgb(0, 0, 0);
     position: absolute;
-    width: 100vw;
+    width: 100%;
     min-height: 350px;
     left: 0;
     -webkit-clip-path: polygon(0% 0%, 0% 35%, 120% 100%, 0% 100%);
@@ -174,9 +215,15 @@ ul {
 
 .content-left p {
     font-size: 78px;
-    font-family: Syne-Extra, Arial, sans-serif;
+    font-family: var(--font-family-syne-extra), Arial, sans-serif;
     font-weight: var(--font-weight-extra);
     margin: 0;
+}
+
+.content-left span {
+    font-size: 21px;
+    font-family: var(--font-family-overpass-regular), Arial, sans-serif;
+    font-weight: var(--font-weight-regular);
 }
 
 .content-left p:hover {

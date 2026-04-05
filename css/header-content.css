@@ -24,7 +24,8 @@ nav {
 
 .logo div {
     font-size: 24px;
-    font-weight: bold;
+    font-family: var(--font-family-syne-extra);
+    font-weight: var(--font-weight-extra);
     color: var(--text-color);
     margin: 0;
 }
@@ -35,6 +36,7 @@ nav {
     align-items: center;
     height: 30px;
     width: 64px;
+    
 }
 
 .first {
