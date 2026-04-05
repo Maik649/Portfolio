@@ -1,0 +1,34 @@
+{
+    "de": {
+        "navAbout": "Über mich",
+        "navSkills": "Skills",
+        "navProjects": "Projekte",
+        "navContact": "Kontakt",
+        "scrollDown": "Nach unten",
+        "headline": "Über mich",
+        "text": "Hallo, mein Name ist Maik Pankow. Ich bin ein Junior Softwareentwickler. Ich habe an verschiedenen Projekten gearbeitet, von kleinen Startups bis hin zu großen Unternehmen. Meine Hauptkompetenzen liegen in der Webentwicklung, insbesondere in JavaScript, React und Node.js. In meiner Freizeit interessiere ich mich für neue Technologien und lerne gerne neue Programmiersprachen.",
+        "location": "Standort in Bernau bei Berlin",
+        "remote": "Offen für Remote-Arbeit",
+        "letsTalk": "Lass uns sprechen",
+        "skillsHeadline": "Skills",
+        "projectsHeadline": "Projekte",
+        "contactHeadline": "Kontakt",
+        "sayHi": "Sag Hallo!"
+    },
+    "en": {
+        "navAbout": "About me",
+        "navSkills": "My Skills",
+        "navProjects": "Projects",
+        "navContact": "Contact",
+        "scrollDown": "Scroll Down",
+        "headline": "About me",
+        "text": "Hello, my name is Maik Pankow. I am a Junior Software Developer. I have worked on various projects, from small startups to large companies. My main skills are in web development, particularly in JavaScript, React, and Node.js. In my free time, I am interested in new technologies and enjoy learning new programming languages.",
+        "location": "Location in Bernau near Berlin",
+        "remote": "Open to work remote",
+        "letsTalk": "Let's Talk",
+        "skillsHeadline": "My Skills",
+        "projectsHeadline": "Projects",
+        "contactHeadline": "Contact",
+        "sayHi": "Say Hi!"
+    }
+}

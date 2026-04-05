@@ -1,13 +1,13 @@
 /*   
 *navigation 
 */
-function init() {
-
+async function init() {
+await database();
 }
 
+ function mobil_menue() {
+   document.getElementById("nav").classList.toggle("is-open");
+   document.querySelector(".hamburg").classList.toggle("checked");
+ }
 
-function navigationToggle() {
-    let toggleNav = document.getElementById("navigation");
-    toggleNav.classList.toggle('show-nav');
-}
 
