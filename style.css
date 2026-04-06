@@ -1,16 +1,15 @@
-
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
 }
 
-header{
+header {
     display: flex;
     background-color: var(--primary-color);
     color: white;
@@ -22,16 +21,21 @@ header{
     position: fixed;
 }
 
-section{
+main {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section {
     width: 100%;
     min-height: 100vh;
     z-index: 0;
     margin: 0;
-    padding: var(--middle-padding);
-    overflow: hidden;
+    padding: 0;
 }
 
-footer{
+footer {
     height: 200px;
     width: 100%;
     background-color: var(--footer-color);

@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <script src="./javascript/renderSkills.js"></script>
+        <script src="./scripts/renderSkills.js"></script>
         <link rel="stylesheet" href="./css/fonts.css">
         <link rel="stylesheet" href="./css/variablen.css">
         <link rel="stylesheet" href="./style.css">
@@ -17,7 +17,13 @@
         <link rel="stylesheet" href="./css/skill.css">
         <link rel="stylesheet" href="./css/footer-content.css">
         <script src="script.js"></script>
-        <script src="./javascript/translate.js"></script>
+        <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Portfolio" />
+        <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+        <script src="./scripts/translate.js"></script>
     </head>
 
     <body onload="init()">
@@ -71,13 +77,16 @@
                 </nav>
             </div>
         </header>
+        <main>
+
+        
         <section id="hero-section" class="hero-section">
             <div class="content-wrapper">
                 <div class="top-headline">
                     <h1>Frontend Developer</h1>
-                    <p>Maik Pankow</p>
-                </div>
-
+                    <span>Maik Pankow</span>
+               
+                    </div>
                 <div class="bottom-headline">
                     <a href="#contact">maik.pankow@gmx.de</a>
                     <div class="scroll-down-btn">
@@ -92,13 +101,13 @@
             <div class="about-me-content-wrapper">
                 <div class="about-content-left">
                     <h1 id="headline-about-me" class="--primary-h1" data-i18n="headline"></h1>
-                    <article id="infos" data-i18n="text">
-                        Write some information about yourself that is IT related. Why are you passionate about
+                    <article id="infos" class="infotext"  data-i18n="text">
+                      <span> Write some information about yourself that is IT related. Why are you passionate about
                         coding?Show a desire to learn new
                         technologies
                         Add a brief description of your problem-solving approach.You can include some key traits like:
                         analytical thinking,
-                        creativity, persistence and collaboration.
+                        creativity, persistence and collaboration.</span>
                     </article>
 
                     <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in
@@ -109,20 +118,21 @@
                         Talk</a>
                 </div>
                 <div class="about-content-right">
-                    <img class="portrait" src="./assets/img/20250128_115945.jpg" alt="portrait">
+                    <span class="portrait-wrapper">
+                        <img  class="portrait" src="./assets/img/20250128_115945.jpg" alt="portrait">
+
+                    </span>
                     <img src="./assets/img/pfeil-bottom-left.svg" alt="">
                 </div>
             </div>
         </section>
         <section id="my-skills" class="skill-section">
-            <div class="may-skill-content-wrapper">
-                <div class="skill-content">
+            <div class="my-skill-content-wrapper">
+               
                     <h1 class="--primary-h1 --margin-top-negative" data-i18n="skillsHeadline">My Skills</h1>
                     <div id="skill-icons" class="skill-icons">
                             
                     </div>
-
-                </div>
             </div>
         </section>
         <section id="projects" class="project-section">
@@ -131,6 +141,7 @@
         <section id="contact" class="contact-section">
             <h1 class="--primary-h1" data-i18n="contactHeadline">Contact</h1>
         </section>
+        </main>
         <footer>
         </footer>
 
