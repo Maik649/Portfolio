@@ -2,7 +2,7 @@
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    min-height: 100vh ;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -13,38 +13,39 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: var(--limitet-width);
-    width: 100%;
+    /* max-width: var(--limitet-width); */
+    width: clamp(300px, 85vw, 1440px);
 }
 
 .hero-section h1 {
     width: auto;
-    font-size: 164px;
+    font-size: clamp(1rem, 10vw, 168px);
     font-family: var(--font-family-syne-extra);
     font-weight: var(--font-weight-extra);
     color: var(--text-color);
     margin: 0;
-    line-height: 140px;
+    line-height: min(85%);
 }
 
 .top-headline h1::after {
     display: block;
     position: relative;
-    left:5%;
+    left: 5%;
     content: '';
     width: 60%;
     height: 5px;
     background-color: var(--text-color);
-    margin-top: 60px;
+    margin-top: max(3.5%);
 }
 
-.top-headline p {
+.top-headline span {
     position: relative;
-    top: -40px;
+
+    top: max(3.0%);
     left: 30%;
     font-family: var(--font-family-overpass-bold);
     font-weight: var(--font-weight-bold);
-    font-size: 48px;
+    font-size: clamp(1rem, 4vw, 48px);
     color: var(--secondary-color);
     margin: 0;
 }
@@ -73,12 +74,12 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin:0 60px 0 0;
+    margin: 0 60px 0 0;
 }
 
 .scroll-down-btn span {
     height: 100%;
-    font-size: 24px;
+    font-size: clamp(1rem, 10vw, 24px);
     font-weight: 100;
     font-family: var(--font-family-overpass-light);
     width: 70px;

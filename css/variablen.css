@@ -82,13 +82,12 @@
     color: var(--text-color);
     width: auto;
     font-weight: var(--font-weight-extra);
-    font-size: 78px;
+    font-size: clamp(1rem, 10vw, 78px);
     font-family: var(--font-family-syne-extra);
     font-weight: var(--font-weight-extra);
     padding: 0px 0 8px 0;
     margin: 0;
 }
-
 .--primary-h1:hover {
     cursor: pointer;
     color: var(--secondary-color);
