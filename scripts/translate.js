@@ -1,4 +1,4 @@
-const TRANSLATE_DB = "javascript/translate.json";
+const TRANSLATE_DB = "scripts/translate.json";
 let translationMap = {};
 let currentLanguage = "de";
 
