@@ -1,18 +1,22 @@
 {
     "de": {
-        "navAbout": "Über mich",
-        "navSkills": " Skills",
-        "navProjects": "Projekte",
-        "scrollDown": "Nach unten",
-        "headline": "Über mich",
-        "text": "Hallo, mein Name ist Maik Pankow. Ich bin ein Junior Softwareentwickler. Ich habe an verschiedenen Projekten gearbeitet, von kleinen Startups bis hin zu großen Unternehmen. Meine Hauptkompetenzen liegen in der Webentwicklung, insbesondere in JavaScript, React und Node.js. In meiner Freizeit interessiere ich mich für neue Technologien und lerne gerne neue Programmiersprachen.",
-        "location": "Standort in Bernau bei Berlin",
-        "remote": "Offen für Remote-Arbeit",
-        "letsTalk": "Lass uns sprechen",
-        "skillsHeadline": "Meine Skills",
-        "projectsHeadline": "Projekte",
-        "contactHeadline": "Kontakt",
-        "sayHi": "Sag Hallo!"
+      "navAbout": "Über mich",
+      "navSkills": " Skills",
+      "navProjects": "Projekte",
+      "scrollDown": "Nach unten",
+      "headline": "Über mich",
+      "text": "Hallo, mein Name ist Maik Pankow. Ich bin ein Junior Softwareentwickler. Ich habe an verschiedenen Projekten gearbeitet, von kleinen Startups bis hin zu großen Unternehmen. Meine Hauptkompetenzen liegen in der Webentwicklung, insbesondere in JavaScript, React und Node.js. In meiner Freizeit interessiere ich mich für neue Technologien und lerne gerne neue Programmiersprachen.",
+      "location": "Standort in Bernau bei Berlin",
+      "remote": "Offen für Remote-Arbeit",
+      "letsTalk": "Lass uns sprechen",
+      "skillsHeadline": "Meine Skills",
+      "skillsFooterText1": "Sie sehen die benötigte Fähigkeit nicht? ",
+      "skillsFooterLinkText": "Kontaktieren Sie mich",
+      "skillsFooterText2": " Ich bin immer bereit zu lernen!",
+      "projectsHeadline": "Projekte",
+      "projectHeadlinText": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+      "contactHeadline": "Kontakt",
+      "sayHi": "Sag Hallo!"
     },
     "en": {
         "navAbout": "About me",
@@ -25,7 +29,11 @@
         "remote": "Open to work remote",
         "letsTalk": "Let's Talk",
         "skillsHeadline": "My Skills",
+        "skillsFooterText1": "Don't see the skill you need? ",
+        "skillsFooterText2": " I'm always ready to learn!",
+        "skillsFooterLinkText": "Contact me",
         "projectsHeadline": "Projects",
+        "projectHeadlinText": "Explore a selection of my work here - Interact with projects to see my skills in action.",
         "contactHeadline": "Contact",
         "sayHi": "Say Hi!"
     }

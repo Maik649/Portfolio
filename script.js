@@ -4,6 +4,8 @@
 async function init() {
   await database();
   loadeImage();
+  renderProject();
+  
 }
 
  function mobil_menue() {

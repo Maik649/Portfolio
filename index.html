@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <script src="./scripts/renderSkills.js"></script>
         <link rel="stylesheet" href="./css/fonts.css">
         <link rel="stylesheet" href="./css/variablen.css">
         <link rel="stylesheet" href="./style.css">
@@ -15,15 +14,19 @@
         <link rel="stylesheet" href="./css/hamburger-menu.css">
         <link rel="stylesheet" href="./css/about-me.css">
         <link rel="stylesheet" href="./css/skill.css">
+        <link rel="stylesheet" href="./css/projekts.css">
         <link rel="stylesheet" href="./css/footer-content.css">
-        <script src="script.js"></script>
         <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg" />
         <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Portfolio" />
-        <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+        <script src="script.js"></script>
+        <script src="./scripts/renderSkills.js"></script>
         <script src="./scripts/translate.js"></script>
+        <script src="./scripts/projects.class.js"></script>
+        <script src="./scripts/el-polo-loco.class.js"></script>
+
     </head>
 
     <body onload="init()">
@@ -133,10 +136,20 @@
                     <div id="skill-icons" class="skill-icons">
                             
                     </div>
+                    <div class="skill-footer">   
+                    <img src="./assets/img/icons/skill-footer.svg" alt=""><span data-i18n="skillsFooterText1">Don’t see the skill you need?</span><a  href="#contact" data-i18n="skillsFooterLinkText">Contact me</a><span data-i18n="skillsFooterText2">I’m always ready to learn!</span>
+                    </div>
+                    <img src="./assets/img/pfeil-bottom-left.svg" alt="">
             </div>
         </section>
-        <section id="projects" class="project-section">
-            <h1 class="--primary-h1 --margin-top-negative" data-i18n="projectsHeadline">Projects</h1>
+        <section class="project-section">
+            <div class="projects-connent-wrapper">  
+                <h1 class="--primary-h1" data-i18n="projectsHeadline">Projects</h1>
+                <p data-i18n="projectHeadlinText">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+                <div id="project" class="projects-content">
+
+                </div>
+            </div>
         </section>
         <section id="contact" class="contact-section">
             <h1 class="--primary-h1" data-i18n="contactHeadline">Contact</h1>
