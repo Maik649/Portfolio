@@ -5,7 +5,7 @@
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    
+
 }
 
 nav {
@@ -36,7 +36,7 @@ nav {
     align-items: center;
     height: 30px;
     width: 64px;
-    
+
 }
 
 .first {
@@ -72,5 +72,41 @@ nav {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+
+@media only screen and (max-width: 1515px) {
+    .header-content-limiter {
+        max-width: var(--limitet-width);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 35px;
+    }
+
+    nav {
+        display: flex;
+        position: absolute;
+        background-color: var(--secondary-color);
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0px;
+        height: min(100vh - 92px);
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .logo div {
+        font-size: 22px;
+        font-family: var(--font-family-syne-extra);
+        font-weight: var(--font-weight-extra);
+        color: var(--text-color);
+        margin: 0;
+    }
 }
 
