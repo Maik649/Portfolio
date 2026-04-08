@@ -45,12 +45,4 @@ function renderTemplate() {
       element.textContent = translatedText;
     }
   });
-
-  const buttonDe = document.getElementById("launch-button-de");
-  const buttonEn = document.getElementById("launch-button-en");
-
-  if (buttonDe && buttonEn) {
-    buttonDe.disabled = currentLanguage === "de";
-    buttonEn.disabled = currentLanguage === "en";
-  }
 }
