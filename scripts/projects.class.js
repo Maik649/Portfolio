@@ -15,19 +15,20 @@ class PROJECTS {
   renderCard(project) {
     return `
       <div class="project">
-        <div class="project-content-left">
-          <img onmouseover="fadeIn_right(this)" id="${project.id}" src="${project.img}" alt="${project.title}">
+        <div class="project-content-left" onmouseover="fadeIn_right(this)">
+          <img class="project-image" id="${project.id}" src="${project.img}" alt="${project.title}">
           <img class="project-extra-icon" src="./assets/img/regangel.png" alt="Project icon">
         </div>
-        <div id="${project.idright}" class="project-content-right">
-          <h2>${project.title}</h2>
-          <p class="project-tech" >${project.tech}</p>
-          <span data-i18n="projectInfosText">${project.text}</span>
-          <div class="button-content">
-          <a class="--primary-button" href="${project.link}">Github</a>
-          <a class="--primary-button" href="${project.link2}">Live</a>
-        </div>
+          <div class="project-content-right">
+            <h2>${project.title}</h2>
+            <p class="project-tech" >${project.tech}</p>
+            <span data-i18n="projectInfosText">${project.text}</span>
+              <div class="button-content">
+                <a class="--primary-button" href="${project.link}">Github</a>
+                <a class="--primary-button" href="${project.link2}">Live</a>
+              </div>
           </div>
+          <span class="project-id">0${project.id}/04</span>
       </div>
     `;
   }
@@ -37,7 +38,6 @@ function renderProject() {
   const projectsData = [
     {
       id: 1,
-      idright:2,
       img: "./assets/img/Pollo-loco-photo.svg",
       title: "El Polo Loco",
       tech: "HTML | CSS | JavaScript",
@@ -47,7 +47,6 @@ function renderProject() {
     },
     {
       id: 2,
-      idright:3,
       img: "./assets/img/join photos .svg",
       title: "Join",
       tech: "JavaScript | Firebase",
@@ -57,7 +56,6 @@ function renderProject() {
     },
     {
       id: 3,
-      idright:4,
       img: "./assets/img/daBubble-photo.svg",
       title: "DABubble",
       tech: "Angular | TypeScript",
@@ -67,7 +65,6 @@ function renderProject() {
     },
     {
       id: 4,
-      idight:5,
       img: "./assets/img/portfolio-photo.png",
       title: "Portfolio",
       tech: "Responsive Design",

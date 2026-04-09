@@ -5,6 +5,7 @@ async function init() {
   await database();
   loadeImage();
   renderProject();
+  renderReference();
   
 }
 
@@ -25,7 +26,10 @@ async function init() {
    const rightContent = projectCard?.querySelector(".project-content-right");
 
    if (projectCard && rightContent) {
-     projectCard.classList.add("is-active");
-     rightContent.classList.add("is-visible");
+     setTimeout(() => {
+       rightContent.classList.add("is-visible");
+       
+      }, 100);
+      projectCard.classList.add("is-active");
    }
- }
+ }     
