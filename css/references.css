@@ -1,0 +1,99 @@
+.references-section {
+    display: flex;
+    justify-content: center;
+}
+
+.references-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--limitet-width);
+    width: 100%;
+    height: 100%;
+    padding: var(--middle-padding);
+}
+
+.reference-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--middle-padding);
+    width: 100%;
+    padding: var(--min-padding);
+}
+
+/* Nach figma design */
+.reference-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
+    padding: var(--min-padding);
+    background-color: var(--primary-color);
+    border: 4px solid var(--text-color);
+}
+
+.reference-quote {
+    width: 40px;
+    height: 40px;
+    text-align: start;
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: bold;
+}
+
+.reference-name {
+    font-family: var(--font-family-overpass-regular);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reference-position {
+    font-size: 14px;
+}
+
+.reference-text {
+    font-size: 20px;
+}
+
+.pfeil-bottom-left {
+ height: auto;
+ width: 100%;
+ display: flex;
+ justify-content: flex-end;
+ padding: 35px;
+}
+
+.references-content-wrapper .pfeil-bottom-left img{
+    width:  200px;
+    height: auto;
+    animation: pfleilAnimation linear both;
+    animation-timeline: scroll();
+    animation-range: 90% 50%;
+}
+
+@keyframes pfleilAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-80px, 30px) scale(1.0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-200px, 100px) scale(1.3);
+        opacity: 1;
+    }
+}
