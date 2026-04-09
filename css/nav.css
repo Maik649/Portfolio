@@ -120,20 +120,6 @@ ul {
     font-weight: var(--font-weight-bold);
 }
 
-.navigation .nav_li_a:active {
-    display: block;
-    position: relative;
-    color: rgb(223, 180, 180);
-    text-decoration: none;
-    text-align: center;
-    padding: 7px;
-    height: 503px;
-    width: clamp(200px, 100vw, 1440px);
-    font-size: clamp(1rem, 10vw, 96px);
-    font-family: var(--font-family-syne-bold);
-    font-weight: var(--font-weight-bold);
-}
-
 .is-open {
     display: flex;
     flex-direction: column;
@@ -149,7 +135,7 @@ ul {
 .banner-wrapper {
     width: 100%;
     height: auto;
-    background: rgb(233, 228, 184);
+    background: rgb(255 253 242);
     margin: 50px 0;
 }
 

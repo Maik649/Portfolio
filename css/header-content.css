@@ -39,19 +39,37 @@ nav {
 
 }
 
+.first-before {
+    position: relative;
+    width: auto;
+    height: 35px;
+    font-weight: bolder;
+}
+
 .first {
     position: relative;
     width: auto;
     height: 35px;
+    margin: -6px 0 0 0;
+}
+
+.logo-seperator {
+    position: relative;
+    width: 3px;
+    height: 80px;
+    margin: 0 0 0 -9.3px;
+    background-color: var(--primary-color);
+    transform: skewX(-10deg);
+    color: var(--primary-color);
 }
 
 .last {
     position: relative;
     width: auto;
-    height: 20px;
-    margin: +0px 0 0 -8px;
-    background-color: white;
-    transform: skewX(-10deg);
+    height: 30px;
+    margin: -6px 0 0 -7px;
+    z-index: -1;
+
 }
 
 .launch-toggle button {
@@ -59,13 +77,26 @@ nav {
     border: 2px solid var(--text-color);
     color: var(--text-color);
     padding: 5px 10px;
+    height: 28px;
     cursor: pointer;
     font-size: 16px;
 }
 
 .launch-toggle button:hover {
     background-color: white;
-    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.launch-toggle button:active,
+.launch-toggle button:focus,
+.launch-toggle button:focus-visible {
+    color: var(--text-color);
+    padding: 5px 10px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: white;
+    border: 2px solid var(--secondary-color);
 }
 
 .header-right {
@@ -102,6 +133,7 @@ nav {
 
 
     .logo div {
+        height: 30px;
         font-size: 22px;
         font-family: var(--font-family-syne-extra);
         font-weight: var(--font-weight-extra);
@@ -109,4 +141,3 @@ nav {
         margin: 0;
     }
 }
-
