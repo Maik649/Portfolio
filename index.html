@@ -6,19 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
 
-        <link rel="stylesheet" href="./css/fonts.css">
-        <link rel="stylesheet" href="./css/variablen.css">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./css/header-content.css">
-        <link rel="stylesheet" href="./css/nav.css">
-        <link rel="stylesheet" href="./css/hero.css">
-        <link rel="stylesheet" href="./css/hamburger-menu.css">
-        <link rel="stylesheet" href="./css/about-me.css">
-        <link rel="stylesheet" href="./css/skill.css">
-        <link rel="stylesheet" href="./css/projects.css">
-        <link rel="stylesheet" href="./css/references.css">
-        <link rel="stylesheet" href="./css/contact.css">
-        <link rel="stylesheet" href="./css/footer-content.css">
+        <link rel="stylesheet" href="../css/variablen.css">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/header-content.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/hero.css">
+        <link rel="stylesheet" href="../css/hamburger-menu.css">
+        <link rel="stylesheet" href="../css/about-me.css">
+        <link rel="stylesheet" href="../css/skill.css">
+        <link rel="stylesheet" href="../css/projects.css">
+        <link rel="stylesheet" href="../css/references.css">
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="../css/footer-content.css">
 
         <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg" />
@@ -27,11 +27,12 @@
         <meta name="apple-mobile-web-app-title" content="Portfolio" />
         <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
 
-        <script src="script.js"></script>
-        <script src="./scripts/renderSkills.js"></script>
-        <script src="./scripts/translate.js"></script>
-        <script src="./scripts/references.js"></script>
-        <script src="./scripts/projects.class.js"></script>
+        <script src="script.js" defer></script>
+        <script src="./scripts/renderSkills.js" defer></script>
+        <script src="./scripts/translate.js" defer></script>
+        <script src="./scripts/references.js" defer></script>
+        <script src="./scripts/projects.class.js" defer></script>
+        <script src="./scripts/mail_valide.js" defer></script>   
     </head>
 
     <body onload="init()">
@@ -186,22 +187,42 @@
             <section id="contact" class="contact-section">
                         
                
-                          <!-- <div class="banner-wrapper">
-                                <div class="banner"></div>
-                            </div> -->
+                          <div class="contact-banner-wrapper">
+                                <div class="contact-banner"></div>
+                            </div>
                             <div class="contact-content-header">
-                                <p data-i18n="sayHi">Say Hi!</p>
+                                <p class="--primary-h1" data-i18n="sayHi">Say Hi!</p>
                                 <span data-i18n="contactDescription">Want to discuss a new project?</span>
                                 <span class="--child-headline" data-i18n="contactDescriptionExtended">Say hello! let's discuss your ideas and make it happen</span>
-                            </div>
+                           
                             <div class="contact-form">
+                                <span id="mail-status" class="mail-status" aria-live="polite"></span>
                                 <form action="scripts/mailto.php" method="post">
-                                    <input id="name" class="--form-input" type="text" name="name" placeholder="Your Name" required>
-                                    <input id="email" class="--form-input" type="email" name="email" placeholder="Your Email" required>
-                                    <textarea id="message" name="message" placeholder="Your Message" required cols="5" rows="5"></textarea>
-                                    <button type="submit" class="--primary-button" data-i18n="send">Send</button>
+
+                                    <div class="field-with-icon">
+                                        <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input" type="text" name="name" placeholder="Your Name" autocomplete="name">
+                                        <span class="field-status-icon" aria-hidden="true"></span>
+                                    </div>
+                                    <span id="error-message-name" class="error-message ">Your name is required.</span>
+                                   
+                                    <div class="field-with-icon">
+                                        <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input" type="email" name="email" placeholder="Your Email" autocomplete="email">
+                                        <span class="field-status-icon" aria-hidden="true"></span>
+                                    </div>
+
+                                    <span id="error-message-email" class="error-message">Your email is required.</span>
+                                    
+                                    <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message" placeholder="Your Message" cols="5" rows="5" autocomplete="off"></textarea>
+                                    <span id="error-message-message" class="error-message ">Your message is required.</span>
+                                    
+                                    <button id="sendenButton" type="submit" class="--primary-light-button" data-i18n="sendMessage" disabled>Send Message</button>
+                                    <div class="privecy-content">
+                                        <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox" name="accept-privacy" value="checkbox1">
+                                        <span class="privacy-text --font-family-overpass-regular" data-i18n="privacyText">I've read the <a class="--font-family-overpass-regular" href="./privacy-policy.html" data-i18n="privacyPolicy">Privacy Policy</a> and agree to the processing of my data as outlined.</span>
+                                    </div>
                                 </form>
                             </div>
+                        </div>
             </section>
         </main>
         <footer>

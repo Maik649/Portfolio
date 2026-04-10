@@ -4,7 +4,7 @@
     --secondary-color: rgb(0, 188, 143);
     --footer-color: rgb(26, 26, 26);
     --text-color: #252525;
-    --text-color-light: #e9e9e9;
+    --text-color-light: #ffffff;
 
     /* buttons colors */
     --primary-button: #e9e9e9;
@@ -49,6 +49,7 @@
 
 .--font-family-syne-regular {
     font-family: var(--font-family-syne-regular);
+    font-weight: var(--font-weight-regular);
 }
 
 .--font-family-overpass-regular {
@@ -62,6 +63,8 @@
     color: var(--text-color) !important;
     font-size: 22px;
     margin: 0;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: var(--font-weight-regular);
     padding: 0;
 }
 
@@ -80,7 +83,32 @@
     text-align: center;
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-regular);
-    transition: all 0.3s ease;
+    transition: all 0.255ms ease;
+}
+
+.--primary-light-button {
+    background-color: var(--text-color);
+    color: var(--text-color-light);
+    border: none;
+    height: 55px;
+    width: 250px;
+    padding: 12px 20px 0 20px;
+    cursor: pointer;
+    font-size: 23px;
+    border: 3px solid var(--primary-color);
+    text-decoration: unset;
+    text-align: center;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: var(--font-weight-regular);
+    transition: all 0.255ms ease;
+}
+
+.--primary-light-button:hover {
+    width: 270px;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: all 0.255ms ease;
 }
 
 .--primary-button:hover {
@@ -130,10 +158,13 @@
     outline: unset;
     border-bottom: 2px solid white;
     color: var(--text-color-light);
-    border-radius: 5px;
     font-size: 16px;
     font-family: var(--font-family-overpass-regular);
 }
+
+.--form-input:focus {
+    border-bottom: 2px solid var(--secondary-color);
+}   
 
 @media only screen and (max-width: 1400px) {
     .--primary-button {
