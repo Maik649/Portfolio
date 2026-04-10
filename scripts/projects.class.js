@@ -15,7 +15,7 @@ class PROJECTS {
   renderCard(project) {
     return `
       <div class="project">
-        <div class="project-content-left" onmouseover="fadeIn_right(this)">
+      <div class="project-content-left" onmouseover="fadeIn_right(this)">
           <img class="project-image" id="${project.id}" src="${project.img}" alt="${project.title}">
           <img class="project-extra-icon" src="./assets/img/regangel.png" alt="Project icon">
         </div>

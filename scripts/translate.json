@@ -22,7 +22,8 @@
     "referencePosition": "Team Kollege",
     "referenceText": "Die Zusammenarbeit mit Maik war eine großartige Erfahrung. Er ist ein talentierter Entwickler, der immer bereit ist, neue Herausforderungen anzunehmen und innovative Lösungen zu finden. Seine Fähigkeiten in JavaScript und React haben unser Projekt erheblich vorangebracht, und seine positive Einstellung macht ihn zu einem wertvollen Teammitglied.",
     "contactHeadline": "Kontakt",
-    "sayHi": "Sag Hallo!"
+    "sayHi": "Sag Hallo!",
+    "sendMessage": "Nachricht senden"
   },
   "en": {
     "navAbout": "About me",
@@ -47,6 +48,8 @@
     "referencePosition": "Team Member",
     "referenceText": "Working with Maik was a great experience. He is a talented developer who is always ready to take on new challenges and find innovative solutions. His skills in JavaScript significantly advanced our project, and his positive attitude makes him a valuable team member.",
     "contactHeadline": "Contact",
-    "sayHi": "Say Hi!"
+    "sayHi": "Say Hi!",
+
+    "sendMessage": "Send Message"
   }
 }
