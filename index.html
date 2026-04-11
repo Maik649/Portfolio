@@ -7,10 +7,10 @@
         <title>Portfolio</title>
 
         <link rel="stylesheet" href="../css/variablen.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="../css/fonts.css">
         <link rel="stylesheet" href="../css/header-content.css">
         <link rel="stylesheet" href="../css/nav.css">
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="../css/hero.css">
         <link rel="stylesheet" href="../css/hamburger-menu.css">
         <link rel="stylesheet" href="../css/about-me.css">
@@ -32,7 +32,7 @@
         <script src="./scripts/translate.js" defer></script>
         <script src="./scripts/references.js" defer></script>
         <script src="./scripts/projects.class.js" defer></script>
-        <script src="./scripts/mail_valide.js" defer></script>   
+        <script src="./scripts/mail_valide.js" defer></script>
     </head>
 
     <body onload="init()">
@@ -65,7 +65,7 @@
                         <li class="nav_li"><a class="nav_li_a" href="#about-me" data-i18n="navAbout">About me</a></li>
                         <li class="nav_li"><a class="nav_li_a" href="#my-skills" data-i18n="navSkills">My Skills</a>
                         </li>
-                        <li class="nav_li"><a class="nav_li_a" href="#projects" data-i18n="navProjects">Projects</a>
+                        <li class="nav_li"><a class="nav_li_a" href="#portfolio" data-i18n="navProjects">Projects</a>
                         </li>
                     </ul>
                     <div class="banner-wrapper">
@@ -133,13 +133,13 @@
                     </div>
                     <div class="about-content-right">
                         <span class="portrait-wrapper">
-                            <img class="portrait" src="./assets/img/20250128_115945.jpg" alt="portrait">
+                            <img class="portrait" src="./assets/img/profil.jpg" alt="portrait">
                         </span>
-                    
 
-                    <div class="pfeil-bottom-left">
-                        <img src="./assets/img/pfeil-bottom-left.svg" alt="">
-                    </div>
+
+                        <div class="pfeil-bottom-left">
+                            <img src="./assets/img/pfeil-bottom-left.svg" alt="">
+                        </div>
                     </div>
 
                 </div>
@@ -163,66 +163,80 @@
                     </div>
                 </div>
             </section>
-            <section class="project-section">
+            <section id="portfolio" class="project-section">
                 <div class="projects-content-wrapper">
                     <h1 class="--primary-h1" data-i18n="projectsHeadline">Portfolio</h1>
-                    <p class="--font-family-overpass-regular --child-headline" data-i18n="projectHeadlinText">Explore a selection of my work here - Interact with projects to
+                    <p class="--font-family-overpass-regular --child-headline" data-i18n="projectHeadlinText">Explore a
+                        selection of my work here - Interact with projects to
                         see my skills in action.</p>
                     <div id="project" class="projects-content"></div>
                 </div>
             </section>
             <section id="references" class="references-section">
-                <div class="references-content-wrapper "> 
-                    <h1 class="--primary-h1" data-i18n="referencesHeadline">References</h1>
-                    <p class="--font-family-overpass-regular --child-headline" data-i18n="referenceHeadlineText">I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.</p>
-                <div id="reference-content" class="reference-content">
-                    
-                </div>
-                <div class="pfeil-bottom-left">
-                    <img src="./assets/img/pfeil-bottom-left.svg" alt="">
-                </div>
+                <div class="references-content-wrapper ">
 
-                </div> 
+                    <h1 class="--primary-h1" data-i18n="referencesHeadline">References</h1>
+
+                    <p class="--font-family-overpass-regular --child-headline" data-i18n="referenceHeadlineText">I
+                        thrive both independently and as part of a team. Here’s what my colleagues have to say about
+                        working with me.</p>
+
+                    <div id="reference-content" class="reference-content"></div>
+
+                    <div class="pfeil-bottom-left">
+                        <img src="./assets/img/pfeil-bottom-left.svg" alt="">
+                    </div>
+
+                </div>
             </section>
             <section id="contact" class="contact-section">
-                        
-               
-                          <div class="contact-banner-wrapper">
-                                <div class="contact-banner"></div>
-                            </div>
-                            <div class="contact-content-header">
-                                <p class="--primary-h1" data-i18n="sayHi">Say Hi!</p>
-                                <span data-i18n="contactDescription">Want to discuss a new project?</span>
-                                <span class="--child-headline" data-i18n="contactDescriptionExtended">Say hello! let's discuss your ideas and make it happen</span>
-                           
-                            <div class="contact-form">
-                                <span id="mail-status" class="mail-status" aria-live="polite"></span>
-                                <form action="scripts/mailto.php" method="post">
 
-                                    <div class="field-with-icon">
-                                        <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input" type="text" name="name" placeholder="Your Name" autocomplete="name">
-                                        <span class="field-status-icon" aria-hidden="true"></span>
-                                    </div>
-                                    <span id="error-message-name" class="error-message ">Your name is required.</span>
-                                   
-                                    <div class="field-with-icon">
-                                        <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input" type="email" name="email" placeholder="Your Email" autocomplete="email">
-                                        <span class="field-status-icon" aria-hidden="true"></span>
-                                    </div>
+                <div class="contact-banner-wrapper">
+                    <div class="contact-banner"></div>
+                </div>
+                <div class="contact-content-header">
+                    <h2 class="--primary-h1" data-i18n="sayHi">Say Hi!</h2>
+                    <span class="headlin-description" data-i18n="contactDescription">Want to discuss a new
+                        project?</span>
+                    <span class="--child-headline" data-i18n="contactDescriptionExtended">Say hello! let's discuss your
+                        ideas and make it happen</span>
 
-                                    <span id="error-message-email" class="error-message">Your email is required.</span>
-                                    
-                                    <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message" placeholder="Your Message" cols="5" rows="5" autocomplete="off"></textarea>
-                                    <span id="error-message-message" class="error-message ">Your message is required.</span>
-                                    
-                                    <button id="sendenButton" type="submit" class="--primary-light-button" data-i18n="sendMessage" disabled>Send Message</button>
-                                    <div class="privecy-content">
-                                        <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox" name="accept-privacy" value="checkbox1">
-                                        <span class="privacy-text --font-family-overpass-regular" data-i18n="privacyText">I've read the <a class="--font-family-overpass-regular" href="./privacy-policy.html" data-i18n="privacyPolicy">Privacy Policy</a> and agree to the processing of my data as outlined.</span>
-                                    </div>
-                                </form>
+                    <div class="contact-form">
+                        <span id="mail-status" class="mail-status" aria-live="polite"></span>
+                        <form action="scripts/mailto.php" method="post">
+
+                            <div class="field-with-icon">
+                                <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input"
+                                    type="text" name="name" placeholder="Your Name" autocomplete="name">
+                                <span class="field-status-icon" aria-hidden="true"></span>
                             </div>
-                        </div>
+                            <span id="error-message-name" class="error-message ">Your name is required.</span>
+
+                            <div class="field-with-icon">
+                                <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input"
+                                    type="email" name="email" placeholder="Your Email" autocomplete="email">
+                                <span class="field-status-icon" aria-hidden="true"></span>
+                            </div>
+
+                            <span id="error-message-email" class="error-message">Your email is required.</span>
+
+                            <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
+                                placeholder="Your Message" cols="5" rows="5" autocomplete="off"></textarea>
+                            <span id="error-message-message" class="error-message ">Your message is required.</span>
+
+                            <button id="sendenButton" type="submit" class="--primary-light-button"
+                                data-i18n="sendMessage" disabled>Send Message</button>
+                            <div class="privecy-content">
+                                <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox"
+                                    name="accept-privacy" value="checkbox1">
+                                <span class="privacy-text --font-family-overpass-regular" data-i18n="privacyText">I've
+                                    read the <a class="--font-family-overpass-regular" href="./privacy-policy.html"
+                                        data-i18n="privacyPolicy">Privacy Policy</a> and agree to the processing of my
+                                    data as outlined.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
