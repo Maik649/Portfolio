@@ -42,7 +42,7 @@
     background-color: black;
 }
 
-.contact-content-header {
+.contact-content-header h2 {
     font-size: 78px;
     font-family: var(--font-family-syne-extra), Arial, sans-serif;
     font-weight: var(--font-weight-extra);
@@ -51,18 +51,30 @@
     width: 100%;
 }
 
-
 .contact-content-header span {
-    width: 100%;
-    font-size: 22px;
-    text-align: center;
-    color: var(--secondary-color);
+    color: var(--text-color-light);
+    font-size: 18px;
 }
 
-.contact-content-header span:nth-child(3) {
-    color: var(--text-color-light) !important;
-    font-size: 18px;
+.contact-content-header .headlin-description{
+text-align: center;
+    font-family: var(--font-family-overpass-regular), Arial, sans-serif;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 32px;
     margin: 0;
+    width: 100%;
+}
+
+.contact-content-header .--child-headline {
+    text-align: center;
+    width: 100%;
+    color: var(--text-color-light) !important;
+    font-size: 22px;
+    margin: 0;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: var(--font-weight-regular);
+    padding: 0;
 }
 
 .contact-form {
@@ -93,7 +105,7 @@ textarea {
 }
 
 textarea:focus {
-    border-bottom: 2px solid var(--secondary-color);
+    outline: 2px solid white;
 }
 
 .privecy-content {
@@ -101,10 +113,13 @@ textarea:focus {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    height: 30px;
 }
 
 .privecy-content .privacy-text {
+    display: block;
     font-size: 14px;
+    height: 16px;
     color: white;
     margin: 0;
 }
@@ -119,6 +134,28 @@ input {
     font-family: var(--font-family-overpass-regular);
 }
 
+input[type="text"]:hover,
+input[type="email"]:hover {
+    background-color: black;
+    border: unset;
+    outline: unset;
+    outline: 4px solid white;
+    color: var(--text-color-light);
+    font-size: 16px;
+    font-family: var(--font-family-overpass-regular);
+}
+
+textarea:hover {
+    background-color: black;
+    border: unset;
+    outline: unset;
+    outline: 4px solid white;
+    color: var(--text-color-light);
+    padding: none;
+    font-size: 16px;
+    font-family: var(--font-family-overpass-regular);
+}
+
 .contact-form input.--form-input:-webkit-autofill,
 .contact-form input.--form-input:-webkit-autofill:hover,
 .contact-form input.--form-input:-webkit-autofill:focus,
@@ -127,7 +164,7 @@ input {
     caret-color: var(--text-color-light);
     -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
     box-shadow: 0 0 0 1000px #000 inset !important;
-    border-bottom: 2px solid white;
+    border: 2px solid white;
     transition: background-color 9999s ease-out 0s;
 }
 
@@ -137,34 +174,65 @@ input {
 }
 
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: var(--secondary-color);
+    width: 15px;
+    height: 15px;
+    accent-color: black;
+    outline: 2px solid white;
 }
 
 input[type="checkbox"]:checked {
-    color: var(--secondary-color);
-    accent-color: var(--secondary-color);
+    color: white;
+    width: 15px;
+    height: 15px;
+    accent-color: black;
+    outline: 2px solid white;
+}
+
+input[type="checkbox"]:hover {
+    accent-color: white;
+    outline: 2px solid white;
+    outline-offset: 2px;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 15px 15px rgba(82, 182, 89, 0.5);
+    clip-path: border-box;
+    clip-path: circle(100% at 50% 50%);
+}
+
+input[type="checkbox"]:checked:hover {
+    accent-color: white;
+    outline: 2px solid white;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 15px 15px rgba(82, 182, 89, 0.5);
+    clip-path: border-box;
+    clip-path: circle(100% at 50% 50%);
 }
 
 .contact-form .error-message {
     display: block;
     color: red;
     font-size: 14px;
-    min-height: 20px;
+    min-height: 15px;
     width: 100%;
-    max-width: 600px;
-    text-align: left;
-    padding-left: 10px;
+    text-align: center;
     opacity: 0;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: 400;
 }
 
 .contact-form .error-message.error-state {
+    width: 100%;
+    max-width: 600px;
+    height: 15px;
+    font-size: 16px;
     color: #ff6b6b;
     opacity: 1;
 }
 
 .contact-form .error-message.success-state {
+    width: 100%;
+    max-width: 600px;
+    height: 15px;
+    font-size: 16px;
     color: #59d07f;
     opacity: 1;
 }
@@ -173,6 +241,7 @@ input[type="checkbox"]:checked {
     width: 100%;
     max-width: 600px;
     position: relative;
+    display: flex;
 }
 
 .contact-form .field-with-icon .--form-input {
@@ -180,13 +249,19 @@ input[type="checkbox"]:checked {
     padding-right: 40px;
 }
 
+.contact-form .field-with-icon .--form-input:active,
+.contact-form .field-with-icon .--form-input:focus {
+    outline: 2px solid white !important;
+    border-bottom: unset !important;
+}
+
 .contact-form .field-with-icon .field-status-icon {
     position: absolute;
     right: 12px;
     top: 50%;
-    transform: translateY(100%);
-    width: 18px;
-    height: 18px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
     opacity: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -197,16 +272,18 @@ input[type="checkbox"]:checked {
 .contact-form textarea {
     background-repeat: no-repeat;
     background-position: right 12px center;
-    background-size: 18px 18px;
+    background-size: 25px 25px;
     padding-right: 40px;
 }
 
 .contact-form .field-with-icon.input-success-state .--form-input {
-    border-bottom: 2px solid #59d07f !important;
+    outline: 2px solid #ffffff !important;
+    border: unset !important;
 }
 
 .contact-form .field-with-icon.input-error-state .--form-input {
-    border-bottom: 2px solid #ff6b6b !important;
+    outline: 2px solid #ffffff !important;
+    border: unset !important;
 }
 
 .contact-form .field-with-icon.input-success-state .field-status-icon {
@@ -220,12 +297,14 @@ input[type="checkbox"]:checked {
 }
 
 .contact-form textarea.input-success-state {
-    border-bottom: 2px solid #59d07f !important;
+    outline: 2px solid #ffffff !important;
+    border-bottom: unset !important;
     background-image: url("../assets/img/icons/susses-icon.svg") !important;
 }
 
 .contact-form textarea.input-error-state {
-    border-bottom: 2px solid #ff6b6b !important;
+    outline: 2px solid #ffffff !important;
+    border-bottom: unset !important;
     background-image: url("../assets/img/icons/error-icon.svg") !important;
 }
 
@@ -235,7 +314,6 @@ input[type="checkbox"]:checked {
     justify-content: center;
     width: 100%;
     text-align: center;
-    /* max-width: 731px; */
     margin: 4px 0 0;
     min-height: 50px;
     font-size: 16px;
@@ -261,23 +339,61 @@ input[type="checkbox"]:checked {
 .--primary-light-button:disabled {
     width: 230px;
     height: 62px;
-    background-color: grey;
-    border: unset;
-    outline: unset;
-    color: var(--text-color);
+    background-color: black;
+    border: 4px solid gray;
+    color: gray;
     font-size: 22px;
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-regular);
 }
 
+.--primary-light-button:disabled:hover {
+    width: 270px;
+    height: 62px;
+    font-size: 22px;
+    outline: unset;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: bolder;
+}
+
 .--primary-light-button:enabled {
     width: 230px;
     height: 62px;
-    background-color: var(--secondary-color);
-    border: unset;
-    outline: unset;
-    color: var(--text-color);
+    background-color: black;
+    color: var(--text-color-light);
+    border: 4px solid var(--primary-color);
     font-size: 22px;
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-regular);
+}
+
+.--primary-light-button:enabled:hover {
+    width: 270px;
+    height: 62px;
+    background-color: black;
+    color: var(--text-color-light);
+    border: 4px solid var(--primary-color);
+    font-size: 22px;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: var(--font-weight-bold);
+}
+
+.privacy-text{
+    display: flex;
+    justify-content: center;
+    height: 16px;
+}
+.privecy-content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--font-family-overpass-regular);
+    font-weight: var(--font-weight-regular);
+    height: 15px;
+    font-size: 15px;
+    width: auto;
+}
+
+.privecy-content:has(input[type="checkbox"]:hover) .privacy-text a {
+    font-weight: bolder;
+
 }

@@ -29,8 +29,8 @@ const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ'' \-]{2,100}$/;
 
 function validateName() {
     const value = vollName.value.trim();
-    if (value.length < 2) {
-        setFieldState(isRequiredMessageName, vollName, false, "Your name is required (min. 2 characters).");
+    if (value.length < 5) {
+        setFieldState(isRequiredMessageName, vollName, false, "Your name is required (min. 5 characters).");
         return false;
     }
     if (!nameRegex.test(value)) {
