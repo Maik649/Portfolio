@@ -5,18 +5,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-
         <link rel="stylesheet" href="../css/variablen.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="../css/fonts.css">
         <link rel="stylesheet" href="../css/header-content.css">
         <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/nav-respons.css">
         <link rel="stylesheet" href="../css/hero.css">
         <link rel="stylesheet" href="../css/hamburger-menu.css">
         <link rel="stylesheet" href="../css/about-me.css">
         <link rel="stylesheet" href="../css/skill.css">
+        <link rel="stylesheet" href="../css/skill-respons.css">
         <link rel="stylesheet" href="../css/projects.css">
+        <link rel="stylesheet" href="../css/projects-respons.css">
         <link rel="stylesheet" href="../css/references.css">
+        <link rel="stylesheet" href="../css/references-respons.css">
         <link rel="stylesheet" href="../css/contact.css">
         <link rel="stylesheet" href="../css/footer-content.css">
 
@@ -47,12 +50,12 @@
                         <p class="first-before">]</p>
                     </div>
                 </div>
-
                 <div class="header-right">
                     <div class="launch-toggle">
                         <button id="launch-button-en">EN</button>
                         <button id="launch-button-de">DE</button>
                     </div>
+                   
                     <div class="hamburg" onclick="mobil_menue();">
                         <span class="line"></span>
                         <span class="line"></span>
@@ -60,6 +63,7 @@
                     </div>
 
                 </div>
+                
                 <nav id="nav" class="navigation">
                     <ul class="ul">
                         <li class="nav_li"><a class="nav_li_a" href="#about-me" data-i18n="navAbout">About me</a></li>
@@ -70,21 +74,22 @@
                     </ul>
                     <div class="banner-wrapper">
                         <div class="banner">
-                            <div class="banner-wrapper-content">
-                                <div class="content-left">
-                                    <p data-i18n="sayHi">Say Hi!</p>
-                                    <span>maik.pankow@gmx.de</span>
-                                </div>
-                                <div class="content-right">
-                                    <a class="icon-links" href=""><img src="./assets/img/Githup-icon.svg"
-                                            alt="Profile Picture"></a>
-                                    <a class="icon-links" href=""><img src="./assets/img/Mail-icon.svg"
-                                            alt="Profile Picture"></a>
-                                    <a class="icon-links" href=""><img src="./assets/img/LinkedIn-icon.svg"
-                                            alt="Profile Picture"></a>
-                                </div>
-                            </div>
                         </div>
+                    </div>
+                        <div class="banner-wrapper-content">
+                            <div class="content-left">
+                                <p data-i18n="sayHi">Say Hi!</p>
+                                <span>maik.pankow@gmx.de</span>
+                             </div>
+                            <div class="content-right">
+                                <a class="icon-links" href=""><img src="./assets/img/Githup-icon.svg"
+                                        alt="Profile Picture"></a>
+                                <a class="icon-links" href=""><img src="./assets/img/Mail-icon.svg"
+                                        alt="Profile Picture"></a>
+                                <a class="icon-links" href=""><img src="./assets/img/LinkedIn-icon.svg"
+                                        alt="Profile Picture"></a>
+                            </div>
+                        
                     </div>
                 </nav>
             </div>
@@ -240,6 +245,19 @@
             </section>
         </main>
         <footer>
+
+                <div class="footer-content-wrapper">
+                    <div class="footer-left">
+                        <p>&copy; 2026 Maik Pankow. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <a class="icon-links" href=""><img src="./assets/img/Githup-icon.svg" alt="Profile Picture"></a>
+                        <a class="icon-links" href=""><img src="./assets/img/Mail-icon.svg" alt="Profile Picture"></a>
+                        <a class="icon-links" href=""><img src="./assets/img/LinkedIn-icon.svg" alt="Profile Picture"></a>
+                        <a href="#hero-section" data-i18n="backToTop">Back to Top</a>
+                    </div>
+                </div>
+
         </footer>
 
     </body>

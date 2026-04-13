@@ -174,12 +174,3 @@
     line-height: 120%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 520px) {
-    .project {
-        flex-direction: column;
-    }
-
-    .project:nth-child(even) {
-        flex-direction: column;
-    }
-}
