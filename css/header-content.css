@@ -73,14 +73,20 @@ nav {
 
 }
 
+.launch-toggle {
+    font-family: var(--font-family-syne-extra);
+    font-weight: var(--font-weight-extra);
+}
+
 .launch-toggle button {
     background-color: transparent;
     border: 2px solid var(--text-color);
     color: var(--text-color);
     padding: 5px 10px;
-    height: 28px;
     cursor: pointer;
     font-size: 16px;
+    font-family: var(--font-family-syne-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 .launch-toggle button:hover {
@@ -104,22 +110,24 @@ nav {
     display: flex;
     gap: 20px;
     align-items: center;
+
 }
 
 
 
 @media only screen and (min-width: 320px) and (max-width: 520px) {
     header {
-            display: flex;
-            background-color: var(--primary-color);
-            color: white;
-            height: 92px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            z-index: 10;
-            position: fixed;
-        }
+        display: flex;
+        background-color: var(--primary-color);
+        color: white;
+        height: 92px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 10;
+        position: fixed;
+    }
+
     .header-content-limiter {
         display: flex;
         justify-content: space-between;
@@ -135,6 +143,5 @@ nav {
         font-weight: var(--font-weight-extra);
         color: var(--text-color);
 
+    }
 }
-}
-

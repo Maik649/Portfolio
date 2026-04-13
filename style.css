@@ -1,22 +1,19 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
     background-color: var(--primary-color);
 }
 
 header {
     display: flex;
     background-color: var(--primary-color);
-    color: white;
-    height: 92px;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 30px 100px ;
     z-index: 10;
     position: fixed;
 }
@@ -36,7 +33,6 @@ section {
 }
 
 footer {
-    height: 200px;
     width: 100%;
     background-color: var(--footer-color);
     text-align: center;
