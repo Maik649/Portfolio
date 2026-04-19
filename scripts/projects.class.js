@@ -24,8 +24,8 @@ class PROJECTS {
             <p class="project-tech" >${project.tech}</p>
             <span data-i18n="projectInfosText">${project.text}</span>
               <div class="button-content">
-                <a class="--primary-button" href="${project.link}">Github</a>
-                <a class="--primary-button" href="${project.link2}">Live</a>
+                <a class="--primary-button" href="${project.link}" target="_blank">Github</a>
+                <a class="--primary-button" href="${project.link2}" target="_blank">Live</a>
               </div>
           </div>
           <span class="project-id">0${project.id}/04</span>
@@ -43,7 +43,7 @@ function renderProject() {
       tech: "HTML | CSS | JavaScript",
       text: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
       link: "",
-      link2: "",
+      link2: "https://elpolooco.maikpankow.de",
     },
     {
       id: 2,
@@ -52,22 +52,13 @@ function renderProject() {
       tech: "JavaScript | Firebase",
       text: "",
       link: "",
-      link2: "",
+      link2: "https://join.maikpankow.de",
     },
     {
       id: 3,
       img: "./assets/img/daBubble-photo.svg",
       title: "DABubble",
       tech: "Angular | TypeScript",
-      text: "",
-      link: "",
-      link2: "",
-    },
-    {
-      id: 4,
-      img: "./assets/img/portfolio-photo.png",
-      title: "Portfolio",
-      tech: "Responsive Design",
       text: "",
       link: "",
       link2: "",

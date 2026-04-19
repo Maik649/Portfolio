@@ -66,10 +66,10 @@
                 
                 <nav id="nav" class="navigation">
                     <ul class="ul">
-                        <li class="nav_li"><a class="nav_li_a" href="#about-me" data-i18n="navAbout">About me</a></li>
-                        <li class="nav_li"><a class="nav_li_a" href="#my-skills" data-i18n="navSkills">My Skills</a>
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#about-me" data-i18n="navAbout">About me</a></li>
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#my-skills" data-i18n="navSkills">My Skills</a>
                         </li>
-                        <li class="nav_li"><a class="nav_li_a" href="#portfolio" data-i18n="navProjects">Projects</a>
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#portfolio" data-i18n="navProjects">Projects</a>
                         </li>
                     </ul>
                     <div class="banner-wrapper">
@@ -92,8 +92,8 @@
                 </nav>
             </div>
         </header>
-        <main>
-
+      
+    
 
             <section id="hero-section" class="hero-section">
                 <div class="content-wrapper">
@@ -125,15 +125,12 @@
                                 analytical thinking,
                                 creativity, persistence and collaboration.</p>
                         </article>
-
-                        <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in
-                                Berlin</span></span>
-                        <span class="icons"><img src="./assets/img/laptop_chromebook.svg" alt=""><span
-                                data-i18n="remote">open to work Remote</span></span>
-                        <a class="--primary-button --margin-top --margin-left" href="#contact"
-                            data-i18n="letsTalk">Let's
-                            Talk</a>
+                        <div class="extra-info">
+                        <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in Berlin</span></span>
+                        <span class="icons"><img src="./assets/img/laptop_chromebook.svg" alt=""><span data-i18n="remote">open to work Remote</span></span>
                     </div>
+                    <a class="--primary-button --margin-left" href="#contact" data-i18n="letsTalk">Let's Talk</a>
+                </div>
                     <div class="about-content-right">
                         <span class="portrait-wrapper">
                             <img class="portrait" src="./assets/img/profil.jpg" alt="portrait">
@@ -243,7 +240,6 @@
                    
                 </div>
             </section>
-        </main>
         <footer>
                 <div class="footer-content-wrapper">
                     <div class="footer-left">
@@ -257,10 +253,15 @@
                             </div>
                         </div>
                         <p>&copy; Maik Pankow 2026</p>
+
+                        <div class="responsive-link-legal-notice">
+                            <a href="./legal-notice.html" target="_blank">Legal Notice</a>
+                        </div>
                     </div>
                     <div class="footer-right">
                         <div class="back-to-top-content">
                             <a href="#hero-section"><img src="./assets/img/icons/to-top.svg" alt="Back to Top"></a>
+                          
                         </div>
                         <div class="footer-icons">
                             <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>

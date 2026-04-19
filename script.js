@@ -13,6 +13,13 @@ function mobil_menue() {
   document.querySelector(".hamburg").classList.toggle("checked");
 }
 
+document.querySelectorAll(".nav_li").forEach((li) => {
+  li.addEventListener("click", () => {
+    document.querySelectorAll(".nav_li").forEach((el) => el.classList.remove("active"));
+    li.classList.add("active");
+  });
+});
+
 function fadeIn_right(currentImg) {
   const projectCard = currentImg?.closest(".project");
   const allProjects = document.querySelectorAll(".project");
@@ -39,3 +46,4 @@ function fadeOut_right(currentProject) {
     projectCard.querySelector(".project-content-right") ?.classList.remove("is-visible");
   }
 }
+

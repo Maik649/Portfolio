@@ -4,16 +4,26 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-family);
     background-color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
     display: flex;
     background-color: var(--primary-color);
     width: 100%;
-    padding: 30px 100px ;
+    padding: 30px clamp(12px, 6vw, 100px);
     z-index: 10;
     position: fixed;
 }

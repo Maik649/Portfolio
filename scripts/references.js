@@ -23,20 +23,20 @@ const referenceData = [
     refName: "Oleg",
     refPosition: "Team Member",
     refText:
-      "Die Zusammenarbeit mit Maik war eine großartige Erfahrung. Er ist ein talentierter Entwickler, der immer bereit ist, neue Herausforderungen anzunehmen und innovative Lösungen zu finden. Seine Fähigkeiten in JavaScript und React haben unser Projekt erheblich vorangebracht, und seine positive Einstellung macht ihn zu einem wertvollen Teammitglied. ",
+      "Die Zusammenarbeit mit Maik hat wirklich Spaß gemacht. Er war immer aktiv im Team dabei und man konnte sich jederzeit auf ihn verlassen. Wenn jemand Hilfe gebraucht hat, war er sofort zur Stelle und hat unterstützt.Was ich besonders geschätzt habe: Er hat immer gute Laune mitgebracht und dadurch auch andere motiviert. Selbst in stressigen Situationen ist er ruhig geblieben und hat geholfen, Lösungen zu finden. Insgesamt war die Arbeit mit ihm sehr angenehm, und ich würde jederzeit wieder mit ihm im Team arbeiten.",
   },
   {
     id: 2,
     refName: "Rene",
     refPosition: "Team Member",
     refText:
-      "Die Zusammenarbeit mit Maik war eine großartige Erfahrung. Er ist ein talentierter Entwickler, der immer bereit ist, neue Herausforderungen anzunehmen und innovative Lösungen zu finden. Seine Fähigkeiten in JavaScript und React haben unser Projekt erheblich vorangebracht, und seine positive Einstellung macht ihn zu einem wertvollen Teammitglied. ",
+      "Die Zusammenarbeit mit Maik war sehr angenehm, da er sich sehr für das Team und das Projekt Interessiert hat. Seinen Aufgabenbereich hat er voll und ganz zu unserer Zufriedenheit bearbeitet. Durch seine Erfahrung konnten wir uns auch bei Fragen immer an Ihn wenden. ",
   },
   {
     id: 3,
     refName: "Jessica",
     refPosition: "Team Member",
     refText:
-      "Die Zusammenarbeit mit Maik war eine großartige Erfahrung. Er ist ein talentierter Entwickler, der immer bereit ist, neue Herausforderungen anzunehmen und innovative Lösungen zu finden. Seine Fähigkeiten in JavaScript und React haben unser Projekt erheblich vorangebracht, und seine positive Einstellung macht ihn zu einem wertvollen Teammitglied. ",
+      "Maik hat sich sehr in unserem Projekt engagiert und zugeteilte Aufgaben eigenständig bearbeitet. Mit seinen Vorkenntnissen in Javascript hat er uns gut weiterhelfen können, wenn wir nicht weiter wussten. Ich bin dankbar für seine große hilfsbereitschaft gewesen ",
   },
 ];

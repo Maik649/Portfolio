@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 48px;
     max-width: var(--limitet-width);
     width: 100%;
     height: 100%;
@@ -28,14 +29,13 @@
 .reference-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     gap: 10px;
-    width: 400px;
-    height: 400px;
-    max-width: 400px;
-    padding: var(--min-padding);
+    min-height: 380px;
+    width: min(450px, 100%);
+    padding: 24px 16px;
     background-color: var(--primary-color);
     border: 4px solid var(--text-color);
 }
@@ -120,7 +120,7 @@
     }
 
     100% {
-        transform: translate(-280px, 250px) scale(1.3);
+        transform: translate(-250px, 200px) scale(1.3);
         opacity: 1;
     }
 }

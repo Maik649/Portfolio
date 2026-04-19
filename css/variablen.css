@@ -134,10 +134,9 @@
     color: var(--text-color);
     width: auto;
     font-weight: var(--font-weight-extra);
-    font-size: clamp(1rem, 10vw, 78px);
+    font-size: clamp(38px, 10vw, 78px);
     font-family: var(--font-family-syne-extra);
     font-weight: var(--font-weight-extra);
-    padding: 0px 0 8px 0;
     margin: 0;
 }
 
@@ -159,27 +158,16 @@
     font-family: var(--font-family-overpass-regular);
 }
 
-@media only screen and (max-width: 1400px) {
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
     .--primary-button {
-        width: 200px;
-        height: 45px;
-        font-size: 18px;
+        width: auto;
+        height: 46px;
+        font-size: 20px;
     }
 
     .--primary-button:hover {
-        width: 220px;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    .--primary-button {
-        width: 230px;
-        height: 62px;
-        font-size: 22px;
-    }
-
-    .--primary-button:hover {
-        width: 170px;
+        width: 190px;
     }
 
     .--margin-left {
@@ -194,7 +182,7 @@
         color: var(--text-color);
         width: auto;
         font-weight: var(--font-weight-extra);
-        font-size: clamp(1rem, 8vw, 78px) !important;
+        font-size: clamp(36px, 8vw, 78px) !important;
         font-family: var(--font-family-syne-extra);
         font-weight: var(--font-weight-extra);
         padding: 0px 0 0px 0 !important;

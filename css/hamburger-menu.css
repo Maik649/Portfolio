@@ -74,21 +74,18 @@
   width: 30px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 520px) {
+@media only screen and (min-width: 320px) and (max-width:768px) {
   .header-right {
+    gap: 40px;
+  }
+
+  .launch-toggle {
+    gap: 15px;
     display: flex;
-    gap: 10px;
-    align-items: center;
   }
 
   .launch-toggle button {
-    background-color: transparent;
-    border: 2px solid var(--text-color);
-    color: var(--text-color);
-    padding: 3px 8px;
-    height: 25px;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 5px 10px 5px;
   }
 
   .hamburg {

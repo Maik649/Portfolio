@@ -116,9 +116,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: -50px;
     margin-bottom: 25px;
+    padding: 0 12px;
 }
 
 .skill-footer span {
@@ -126,6 +128,8 @@
     font-size: 20px;
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-bold);
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .skill-footer a {
@@ -133,6 +137,8 @@
     font-size: 20px;
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-bold);
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .skill-footer:hover img {
