@@ -123,7 +123,7 @@ article {
 @media (max-width: 1440px) {
     .--primary-h1 {
         color: var(--text-color);
-        width: 100%;
+        width: auto;
         font-weight: var(--font-weight-extra);
         font-size: clamp(1rem, 5vw, 78px);
         font-family: var(--font-family-syne-extra);
