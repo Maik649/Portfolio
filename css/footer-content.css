@@ -115,3 +115,18 @@ footer .logo {
         padding: 10px 0;
     }
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer-content-wrapper {
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .footer-left>p {
+        font-size: 20px;
+    }
+
+    .footer-icons {
+        gap: 28px;
+    }
+}

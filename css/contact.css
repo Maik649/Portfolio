@@ -444,3 +444,31 @@ input[type="checkbox"]:checked:hover {
         text-align: center;
     }
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact-content-header {
+        padding: 30px 28px;
+    }
+
+    .contact-content-header h2 {
+        font-size: clamp(52px, 7vw, 68px);
+        text-align: center;
+    }
+
+    .contact-content-header .headlin-description {
+        font-size: clamp(24px, 3.2vw, 30px);
+    }
+
+    .contact-content-header .--child-headline {
+        font-size: clamp(18px, 2.2vw, 22px);
+    }
+
+    .contact-form {
+        padding: 0 24px 40px;
+    }
+
+    .privecy-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
