@@ -1,6 +1,4 @@
-/*
- *navigation
- */
+
 async function init() {
   await database();
   loadeImage();
