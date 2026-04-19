@@ -7,6 +7,15 @@ let isRequiredMessageEmail = document.getElementById("error-message-email");
 let isRequiredMessage = document.getElementById("error-message-message");
 let sendenButton = document.getElementById("sendenButton");
 
+// Hilfsfunktion für Übersetzungen
+function getTranslation(key, fallback) {
+    if (typeof translationMap !== 'undefined' && typeof currentLanguage !== 'undefined') {
+        const langData = translationMap[currentLanguage] || {};
+        return langData[key] || fallback;
+    }
+    return fallback;
+}
+
 function setFieldState(messageElement, inputElement, isValid, message) {
     if (isValid) {
         messageElement.textContent = "";
@@ -30,11 +39,13 @@ const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ'' \-]{2,100}$/;
 function validateName() {
     const value = vollName.value.trim();
     if (value.length < 5) {
-        setFieldState(isRequiredMessageName, vollName, false, "Your name is required (min. 5 characters).");
+        const message = getTranslation("errorNameRequired", "Your name is required (min. 5 characters).");
+        setFieldState(isRequiredMessageName, vollName, false, message);
         return false;
     }
     if (!nameRegex.test(value)) {
-        setFieldState(isRequiredMessageName, vollName, false, "Invalid characters in name. No HTML or special characters allowed.");
+        const message = getTranslation("errorNameInvalid", "Invalid characters in name. No HTML or special characters allowed.");
+        setFieldState(isRequiredMessageName, vollName, false, message);
         return false;
     }
     setFieldState(isRequiredMessageName, vollName, true, "Name looks good.");
@@ -45,15 +56,18 @@ function validateEmail() {
     const value = email.value.trim();
     const emailRegex = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/;
     if (value === "") {
-        setFieldState(isRequiredMessageEmail, email, false, "Your email is required.");
+        const message = getTranslation("errorEmailRequired", "Your email is required.");
+        setFieldState(isRequiredMessageEmail, email, false, message);
         return false;
     }
     if (/[<>]/.test(value)) {
-        setFieldState(isRequiredMessageEmail, email, false, "Please enter a valid email address.");
+        const message = getTranslation("errorEmailInvalid", "Please enter a valid email address.");
+        setFieldState(isRequiredMessageEmail, email, false, message);
         return false;
     }
     if (!emailRegex.test(value)) {
-        setFieldState(isRequiredMessageEmail, email, false, "Please enter a valid email address.");
+        const message = getTranslation("errorEmailInvalid", "Please enter a valid email address.");
+        setFieldState(isRequiredMessageEmail, email, false, message);
         return false;
     }
     setFieldState(isRequiredMessageEmail, email, true, "Email looks good.");
@@ -66,11 +80,13 @@ const scriptRegex = /[<>]|script\b|javascript\s*:|on\w+\s*=|data\s*:/i;
 function validateMessage() {
     const value = userMessage.value.trim();
     if (value.length < 10) {
-        setFieldState(isRequiredMessage, userMessage, false, "Your message is required (min. 10 characters).");
+        const message = getTranslation("errorMessageRequired", "Your message is required (min. 10 characters).");
+        setFieldState(isRequiredMessage, userMessage, false, message);
         return false;
     }
     if (scriptRegex.test(value)) {
-        setFieldState(isRequiredMessage, userMessage, false, "Invalid content detected. No HTML or script code allowed.");
+        const message = getTranslation("errorMessageInvalid", "Invalid content detected. No HTML or script code allowed.");
+        setFieldState(isRequiredMessage, userMessage, false, message);
         return false;
     }
     setFieldState(isRequiredMessage, userMessage, true, "Message looks good.");
@@ -101,10 +117,12 @@ function renderMailStatusFromUrl() {
     statusElement.classList.remove("success", "error");
 
     if (mailStatus === "success") {
-        statusElement.textContent = "Message sent successfully. Thank you!";
+        const message = getTranslation("mailSuccess", "Message sent successfully. Thank you!");
+        statusElement.textContent = message;
         statusElement.classList.add("success");
     } else {
-        statusElement.textContent = "Message could not be sent. Please try again.";
+        const message = getTranslation("mailError", "Message could not be sent. Please try again.");
+        statusElement.textContent = message;
         statusElement.classList.add("error");
     }
 

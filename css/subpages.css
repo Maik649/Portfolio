@@ -1,0 +1,121 @@
+.subpage-main {
+    min-height: 100vh;
+    padding: 150px 16px 80px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.subpage-container {
+    width: min(100%, 960px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.subpage-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subpage-kicker {
+    font-family: var(--font-family-overpass-regular);
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.subpage-header h1 {
+    font-family: var(--font-family-syne-extra);
+    font-size: clamp(42px, 9vw, 88px);
+    line-height: 0.95;
+    margin: 0;
+}
+
+.subpage-intro {
+    max-width: 70ch;
+    font-family: var(--font-family-overpass-regular);
+    font-size: clamp(18px, 2.6vw, 22px);
+    line-height: 1.5;
+}
+
+.subpage-card {
+    border: 4px solid var(--text-color);
+    padding: clamp(20px, 4vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.subpage-card h2 {
+    font-family: var(--font-family-syne-bold);
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0;
+}
+
+.subpage-card p,
+.subpage-card li,
+.subpage-card address {
+    font-family: var(--font-family-overpass-regular);
+    font-size: clamp(17px, 2.4vw, 20px);
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.subpage-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    margin: 0;
+    padding-left: 22px;
+}
+
+.subpage-card a,
+.subpage-home-link {
+    color: var(--secondary-color);
+}
+
+.subpage-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
+    font-family: var(--font-family-overpass-regular);
+    font-size: 18px;
+}
+
+.subpage-home-link {
+    width: fit-content;
+    font-family: var(--font-family-overpass-bold);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.subpage-home-link:hover,
+.subpage-card a:hover {
+    text-decoration: underline;
+}
+
+.launch-toggle button.is-active {
+    background-color: white;
+    border-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .subpage-main {
+        padding: 130px 16px 56px;
+    }
+
+    .subpage-container {
+        gap: 24px;
+    }
+
+    .subpage-card {
+        gap: 16px;
+    }
+
+    .subpage-meta {
+        font-size: 16px;
+    }
+}

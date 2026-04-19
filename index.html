@@ -207,32 +207,31 @@
 
                             <div class="field-with-icon">
                                 <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input"
-                                    type="text" name="name" placeholder="Your Name" autocomplete="name">
+                                    type="text" name="name" placeholder="Your Name" autocomplete="name" data-i18n-placeholder="namePlaceholder">
                                 <span class="field-status-icon" aria-hidden="true"></span>
                             </div>
-                            <span id="error-message-name" class="error-message ">Your name is required.</span>
+                            <span id="error-message-name" class="error-message " data-i18n="errorNameRequired">Your name is required.</span>
 
                             <div class="field-with-icon">
                                 <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input"
-                                    type="email" name="email" placeholder="Your Email" autocomplete="email">
+                                    type="email" name="email" placeholder="Your Email" autocomplete="email" data-i18n-placeholder="emailPlaceholder">
                                 <span class="field-status-icon" aria-hidden="true"></span>
                             </div>
 
-                            <span id="error-message-email" class="error-message">Your email is required.</span>
+                            <span id="error-message-email" class="error-message" data-i18n="errorEmailRequired">Your email is required.</span>
 
                             <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
-                                placeholder="Your Message" cols="5" rows="5" autocomplete="off"></textarea>
-                            <span id="error-message-message" class="error-message ">Your message is required.</span>
+                                placeholder="Your Message" cols="5" rows="5" autocomplete="off" data-i18n-placeholder="messagePlaceholder"></textarea>
+                            <span id="error-message-message" class="error-message " data-i18n="errorMessageRequired">Your message is required.</span>
 
                             <button id="sendenButton" type="submit" class="--primary-light-button"
                                 data-i18n="sendMessage" disabled>Send Message</button>
                             <div class="privecy-content">
                                 <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox"
                                     name="accept-privacy" value="checkbox1">
-                                <span class="privacy-text --font-family-overpass-regular" data-i18n="privacyText">I've
-                                    read the <a class="--font-family-overpass-regular" href="./privacy-policy.html"
-                                        data-i18n="privacyPolicy">Privacy Policy</a> and agree to the processing of my
-                                    data as outlined.</span>
+                                <span class="privacy-text --font-family-overpass-regular"><span data-i18n="privacyText">I've read the</span>
+                                    <a class="--font-family-overpass-regular" href="./subpages/privacy-policy.html"
+                                        data-i18n="privacyPolicy">Privacy Policy</a> <span data-i18n="privacyTextEnd">and agree to the processing of my data as outlined.</span></span>
                             </div>
                         </form>
                         
@@ -255,7 +254,7 @@
                         <p>&copy; Maik Pankow 2026</p>
 
                         <div class="responsive-link-legal-notice">
-                            <a href="./legal-notice.html" target="_blank">Legal Notice</a>
+                            <a href="./subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
                         </div>
                     </div>
                     <div class="footer-right">
@@ -269,7 +268,7 @@
                             <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/" target="_blank"><img src="./assets/img/LinkedIn-icon.svg" alt="Profile Picture LinkedIn"></a>
                         </div>
                         <div class="footer-link-legal-notice">
-                            <a href="./legal-notice.html" target="_blank">Legal Notice</a>
+                            <a href="./subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
                         </div>
                     </div>
                 </div>

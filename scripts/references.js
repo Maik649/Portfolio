@@ -4,39 +4,49 @@ function renderReference() {
     const ref = referenceData[index];
     refContent.innerHTML += templateReference(ref);
   }
-    
-    
 }
 
 function templateReference(ref) {
+  // Get translations from the global translationMap
+  const langData = translationMap[currentLanguage] || {};
+  const refName = langData[ref.nameKey] || ref.refName;
+  const refPosition = langData[ref.positionKey] || ref.refPosition;
+  const refText = langData[ref.textKey] || ref.refText;
+  
   return `<div class="reference-card">
             <p class="reference-quote">,,</p>
-            <span class="reference-name" data-i18n="">${ref.refName}</span>
-            <span class="reference-position --font-family-overpass-regular" data-i18n="referencePosition">${ref.refPosition}</span>
-            <span class="reference-text --font-family-overpass-regular" data-i18n="referenceText">${ref.refText}</span>
+            <span class="reference-name">${refName}</span>
+            <span class="reference-position --font-family-overpass-regular">${refPosition}</span>
+            <span class="reference-text --font-family-overpass-regular">${refText}</span>
         </div>`;
 }
 
 const referenceData = [
   {
     id: 1,
+    nameKey: "referenceName1",
+    positionKey: "referencePosition1",
+    textKey: "referenceText1",
     refName: "Oleg",
     refPosition: "Team Member",
-    refText:
-      "Die Zusammenarbeit mit Maik hat wirklich Spaß gemacht. Er war immer aktiv im Team dabei und man konnte sich jederzeit auf ihn verlassen. Wenn jemand Hilfe gebraucht hat, war er sofort zur Stelle und hat unterstützt.Was ich besonders geschätzt habe: Er hat immer gute Laune mitgebracht und dadurch auch andere motiviert. Selbst in stressigen Situationen ist er ruhig geblieben und hat geholfen, Lösungen zu finden. Insgesamt war die Arbeit mit ihm sehr angenehm, und ich würde jederzeit wieder mit ihm im Team arbeiten.",
+    refText: "Die Zusammenarbeit mit Maik hat wirklich Spaß gemacht...",
   },
   {
     id: 2,
+    nameKey: "referenceName2",
+    positionKey: "referencePosition2",
+    textKey: "referenceText2",
     refName: "Rene",
     refPosition: "Team Member",
-    refText:
-      "Die Zusammenarbeit mit Maik war sehr angenehm, da er sich sehr für das Team und das Projekt Interessiert hat. Seinen Aufgabenbereich hat er voll und ganz zu unserer Zufriedenheit bearbeitet. Durch seine Erfahrung konnten wir uns auch bei Fragen immer an Ihn wenden. ",
+    refText: "Die Zusammenarbeit mit Maik war sehr angenehm...",
   },
   {
     id: 3,
+    nameKey: "referenceName3",
+    positionKey: "referencePosition3",
+    textKey: "referenceText3",
     refName: "Jessica",
     refPosition: "Team Member",
-    refText:
-      "Maik hat sich sehr in unserem Projekt engagiert und zugeteilte Aufgaben eigenständig bearbeitet. Mit seinen Vorkenntnissen in Javascript hat er uns gut weiterhelfen können, wenn wir nicht weiter wussten. Ich bin dankbar für seine große hilfsbereitschaft gewesen ",
+    refText: "Maik hat sich sehr in unserem Projekt engagiert...",
   },
 ];
