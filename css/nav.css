@@ -30,8 +30,6 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* height: max(167px, 5vw);
-    width: clamp(200px, 50vw, 580px); */
     position: relative;
 }
 
@@ -134,7 +132,6 @@ ul {
     width: clamp(200px, 100vw, 100%);
     height: calc(100vh - 92px);
     z-index: 1000;
-    overflow-y: auto;
 }
 
 .banner-wrapper-content {

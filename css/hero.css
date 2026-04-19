@@ -209,8 +209,7 @@
         width: 35px !important;
         height: 69px !important;
         color: var(--text-color);
-        animation: bounce 3.5s infinite ease-in-out;
-        transition: all 3.5s ease-in-out;
+        animation: bounce 2.5s infinite ease-in-out;
     }
 
     .scroll-down-btn span {
