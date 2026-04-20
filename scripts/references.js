@@ -1,5 +1,12 @@
 function renderReference() {
-  let refContent = document.getElementById("reference-content");
+  const refContent = document.getElementById("reference-content");
+  if (!refContent) {
+    return;
+  }
+
+  // Prevent duplicate cards when renderReference is triggered multiple times.
+  refContent.innerHTML = "";
+
   for (let index = 0; index < referenceData.length; index++) {
     const ref = referenceData[index];
     refContent.innerHTML += templateReference(ref);
@@ -7,7 +14,6 @@ function renderReference() {
 }
 
 function templateReference(ref) {
-  // Get translations from the global translationMap
   const langData = translationMap[currentLanguage] || {};
   const refName = langData[ref.nameKey] || ref.refName;
   const refPosition = langData[ref.positionKey] || ref.refPosition;
