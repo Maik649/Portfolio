@@ -5,23 +5,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="stylesheet" href="../css/variablen.css">
+        <link rel="stylesheet" href="./css/variablen.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="../css/fonts.css">
-        <link rel="stylesheet" href="../css/header-content.css">
-        <link rel="stylesheet" href="../css/nav.css">
-        <link rel="stylesheet" href="../css/nav-respons.css">
-        <link rel="stylesheet" href="../css/hero.css">
-        <link rel="stylesheet" href="../css/hamburger-menu.css">
-        <link rel="stylesheet" href="../css/about-me.css">
-        <link rel="stylesheet" href="../css/skill.css">
-        <link rel="stylesheet" href="../css/skill-respons.css">
-        <link rel="stylesheet" href="../css/projects.css">
-        <link rel="stylesheet" href="../css/projects-respons.css">
-        <link rel="stylesheet" href="../css/references.css">
-        <link rel="stylesheet" href="../css/references-respons.css">
-        <link rel="stylesheet" href="../css/contact.css">
-        <link rel="stylesheet" href="../css/footer-content.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/header-content.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="stylesheet" href="./css/nav-respons.css">
+        <link rel="stylesheet" href="./css/hero.css">
+        <link rel="stylesheet" href="./css/hamburger-menu.css">
+        <link rel="stylesheet" href="./css/about-me.css">
+        <link rel="stylesheet" href="./css/skill.css">
+        <link rel="stylesheet" href="./css/skill-respons.css">
+        <link rel="stylesheet" href="./css/projects.css">
+        <link rel="stylesheet" href="./css/projects-respons.css">
+        <link rel="stylesheet" href="./css/references.css">
+        <link rel="stylesheet" href="./css/references-respons.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <link rel="stylesheet" href="./css/footer-content.css">
 
         <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg" />
@@ -210,6 +210,7 @@
                                     type="text" name="name" placeholder="Your Name" autocomplete="name" data-i18n-placeholder="namePlaceholder">
                                 <span class="field-status-icon" aria-hidden="true"></span>
                             </div>
+                            
                             <span id="error-message-name" class="error-message " data-i18n="errorNameRequired">Your name is required.</span>
 
                             <div class="field-with-icon">
@@ -224,11 +225,9 @@
                                 placeholder="Your Message" cols="5" rows="5" autocomplete="off" data-i18n-placeholder="messagePlaceholder"></textarea>
                             <span id="error-message-message" class="error-message " data-i18n="errorMessageRequired">Your message is required.</span>
 
-                            <button id="sendenButton" type="submit" class="--primary-light-button"
-                                data-i18n="sendMessage" disabled>Send Message</button>
+                            <button id="sendenButton" type="submit" class="--primary-light-button" data-i18n="sendMessage" disabled>Send Message</button>
                             <div class="privecy-content">
-                                <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox"
-                                    name="accept-privacy" value="checkbox1">
+                                <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox" name="accept-privacy" value="checkbox1">
                                 <span class="privacy-text --font-family-overpass-regular"><span data-i18n="privacyText">I've read the</span>
                                     <a class="--font-family-overpass-regular" href="./subpages/privacy-policy.html"
                                         data-i18n="privacyPolicy">Privacy Policy</a> <span data-i18n="privacyTextEnd">and agree to the processing of my data as outlined.</span></span>
@@ -251,8 +250,8 @@
                                 <p class="first-before">]</p>
                             </div>
                         </div>
-                        <p>&copy; Maik Pankow 2026</p>
-
+                        <p class="copyright">&copy; Maik Pankow 2026</p>
+                        <a class="footer-email" href="mailto:maik.pankow@gmx.de">maik.pankow@gmx.de</a>
                         <div class="responsive-link-legal-notice">
                             <a href="./subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
                         </div>
@@ -260,7 +259,6 @@
                     <div class="footer-right">
                         <div class="back-to-top-content">
                             <a href="#hero-section"><img src="./assets/img/icons/to-top.svg" alt="Back to Top"></a>
-                          
                         </div>
                         <div class="footer-icons">
                             <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>

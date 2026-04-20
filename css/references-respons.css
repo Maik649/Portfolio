@@ -7,26 +7,28 @@
     .reference-content {
 
         flex-direction: column;
+        align-items: center;
 
     }
 
     .reference-card {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
     .--child-headline {
         font-size: 16px;
         width: 75%;
-        margin-top: 15px;
     }
 
     .reference-text {
         font-size: 16px;
     }
-.pfeil-bottom-left {
- padding: 0;
-}
+
+    .pfeil-bottom-left {
+        padding: 0;
+    }
+
     .references-content-wrapper .pfeil-bottom-left img {
         width: 200px;
         height: auto;
@@ -36,10 +38,6 @@
 @media only screen and (min-width:769px) and (max-width:1024px) {
     .references-content-wrapper {
         padding: 0;
-    }
-
-    .reference-content {
-        flex-direction: column;
     }
 
     .reference-card {

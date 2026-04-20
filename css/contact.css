@@ -57,8 +57,8 @@
     font-size: 18px;
 }
 
-.contact-content-header .headlin-description{
-text-align: center;
+.contact-content-header .headlin-description {
+    text-align: center;
     font-family: var(--font-family-overpass-regular), Arial, sans-serif;
     color: var(--secondary-color);
     font-weight: 700;
@@ -379,11 +379,12 @@ input[type="checkbox"]:checked:hover {
     font-weight: var(--font-weight-bold);
 }
 
-.privacy-text{
+.privacy-text {
     display: flex;
     justify-content: center;
     height: auto;
 }
+
 .privecy-content a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -397,6 +398,48 @@ input[type="checkbox"]:checked:hover {
 .privecy-content:has(input[type="checkbox"]:hover) .privacy-text a {
     font-weight: bolder;
 
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .contact-content-wrapper {
+        padding: 0;
+    }
+
+    .contact-banner {
+        min-height: 150px;
+    }
+
+    .contact-content-header {
+        padding: 20px 12px;
+    }
+
+    .contact-content-header h2 {
+        font-size: clamp(36px, 12vw, 60px);
+        text-align: center;
+    }
+
+    .contact-content-header .headlin-description {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+
+    .contact-content-header .--child-headline {
+        font-size: clamp(16px, 4vw, 22px);
+    }
+
+    .contact-form {
+        padding: 0 8px 30px;
+    }
+
+    .contact-content-header span {
+        color: var(--text-color-light);
+        font-size: 14px;
+    }
+
+    .privacy-text {
+        font-size: 14px;
+        justify-content: center;
+        line-height: 1.4;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -421,13 +464,8 @@ input[type="checkbox"]:checked:hover {
         padding: 0 8px 30px;
     }
 
-    .privecy-content {
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
     .privacy-text {
-        justify-content: flex-start;
+        justify-content: center;
         line-height: 1.4;
     }
 

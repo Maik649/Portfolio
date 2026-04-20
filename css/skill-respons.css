@@ -28,6 +28,16 @@
 }
 
 @media only screen and (min-width: 421px) and (max-width: 768px) {
+    .skill-icons {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: var(--middle-padding);
+    }
+
     .skill-footer {
         display: flex;
         justify-content: center;

@@ -226,13 +226,13 @@
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
     .--primary-button {
-        width: auto;
         height: 46px;
         font-size: 20px;
+        width: 200px;
     }
 
     .--primary-button:hover {
-        width: 190px;
+        width: 210px;
     }
 
     .--margin-left {

@@ -43,11 +43,10 @@
     flex-direction: column;
     position: relative;
     width: min(500px, 100%);
+    height: fit-content;
     background: #0a0a0a;
-    /* fallback colour. Make sure this is just one solid colour. */
     background: -webkit-linear-gradient(rgb(100, 100, 100), rgb(100, 100, 100));
     background: linear-gradient(rgb(100, 100, 100), rgb(100, 100, 100));
-    /* The least supported option. */
 }
 
 .project-content-left .project-image {
@@ -101,7 +100,6 @@
     font-size: clamp(1rem, 5vw, 42px);
     font-family: var(--font-family-syne-extra);
     font-weight: var(--font-weight-extra);
-    padding: 0px 0 8px 0;
     margin: 0;
 }
 
@@ -111,7 +109,6 @@
     font-size: clamp(1rem, 5vw, 23px);
     font-family: var(--font-family-overpass-regular);
     font-weight: var(--font-weight-regular);
-    padding: 0px 0 8px 0;
     margin: 0;
 }
 
@@ -161,7 +158,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 20px;
     width: calc(100% - 40px);
 }
 
@@ -173,4 +169,3 @@
     font-weight: var(--font-weight-bold);
     line-height: 120%;
 }
-
