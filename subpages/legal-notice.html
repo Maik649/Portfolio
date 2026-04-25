@@ -1,142 +1,167 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-title="legalNoticeTitle">Impressum</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/variablen.css">
-    <link rel="stylesheet" href="../css/header-content.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/nav-respons.css">
-    <link rel="stylesheet" href="../css/hamburger-menu.css">
-    <link rel="stylesheet" href="../css/footer-content.css">
-    <link rel="stylesheet" href="../css/subpages.css">
-    <script src="../scripts/translate.js" defer></script>
-</head>
-<body onload="database()">
-    <header>
-        <div class="header-content-limiter">
-            <div class="logo">
-                <a href="../index.html" class="subpage-home-link" data-i18n-aria-label="backToHome">
-                    <div class="logo-content">
-                        <p class="first-before">[</p>
-                        <p class="first">M</p>
-                        <p class="logo-seperator">/</p>
-                        <p class="last">P</p>
-                        <p class="first-before">]</p>
-                    </div>
-                </a>
-            </div>
-            <div class="header-right">
-                <div class="launch-toggle">
-                    <button id="launch-button-en" type="button">EN</button>
-                    <button id="launch-button-de" type="button">DE</button>
-                </div>
-                <div class="hamburg" onclick="mobil_menue();">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-            </div>
-            <nav id="nav" class="navigation">
-                <ul class="ul">
-                    <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#about-me" data-i18n="navAbout">About me</a></li>
-                    <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#my-skills" data-i18n="navSkills">My Skills</a></li>
-                    <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#portfolio" data-i18n="navProjects">Portfolio</a></li>
-                </ul>
-                <div class="banner-wrapper">
-                    <div class="banner"></div>
-                </div>
-                <div class="banner-wrapper-content">
-                    <div class="content-limitet">
-                        <div class="content-left">
-                            <p data-i18n="sayHi">Sag Hallo!</p>
-                            <span>maik.pankow@gmx.de</span>
-                        </div>
-                        <div class="content-right">
-                            <a class="icon-links" href="https://github.com/Maik649" target="_blank" rel="noreferrer"><img src="../assets/img/Githup-icon.svg" alt="GitHub"></a>
-                            <a class="icon-links" href="mailto:maik.pankow@gmx.de"><img src="../assets/img/Mail-icon.svg" alt="E-Mail"></a>
-                            <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/" target="_blank" rel="noreferrer"><img src="../assets/img/LinkedIn-icon.svg" alt="LinkedIn"></a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <main class="subpage-main">
-        <div class="subpage-container">
-            <div class="subpage-header">
-                <span class="subpage-kicker" data-i18n="legalNoticeKicker">Rechtliche Angaben</span>
-                <h1 data-i18n="legalNoticeTitle">Impressum</h1>
-                <p class="subpage-intro" data-i18n="legalNoticeIntro">Dieses Impressum ist fuer dein Portfolio als deutsche Unterseite vorbereitet. Ergaenze die markierten Pflichtangaben vor der Veroeffentlichung unbedingt vollstaendig.</p>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title data-i18n-title="legalNoticeTitle">Impressum</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/variablen.css">
+        <link rel="stylesheet" href="../css/header-content.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/nav-respons.css">
+        <link rel="stylesheet" href="../css/hamburger-menu.css">
+        <link rel="stylesheet" href="../css/footer-content.css">
+        <link rel="stylesheet" href="../css/subpages.css">
+        <script src="../scripts/translate.js" defer></script>
+    </head>
 
-            <div class="subpage-card">
-                <h2 data-i18n="legalNoticeSection1Title">Angaben gemaess Paragraph 5 TMG</h2>
-                <address>
-                    Maik Pankow<br>
-                    <span data-i18n="legalNoticeStreet">Strasse und Hausnummer: [bitte ergaenzen]</span><br>
-                    <span data-i18n="legalNoticeCity">PLZ und Ort: [bitte ergaenzen]</span><br>
-                    <span data-i18n="legalNoticeCountry">Deutschland</span>
-                </address>
-                <p><span data-i18n="legalNoticeEmailLabel">E-Mail:</span> <a href="mailto:maik.pankow@gmx.de">maik.pankow@gmx.de</a></p>
-                <p data-i18n="legalNoticePhone">Telefon: [optional, falls anzugeben]</p>
-            </div>
-
-            <div class="subpage-card">
-                <h2 data-i18n="legalNoticeSection2Title">Verantwortlich fuer den Inhalt nach Paragraph 18 Absatz 2 MStV</h2>
-                <p data-i18n="legalNoticeSection2Text">Maik Pankow, Anschrift wie oben.</p>
-            </div>
-
-            <div class="subpage-card">
-                <h2 data-i18n="legalNoticeSection3Title">Berufliche Angaben</h2>
-                <p data-i18n="legalNoticeSection3Text">Diese Website dient derzeit der Vorstellung meiner Person und meiner Projekte als Portfolio-Website.</p>
-                <ul>
-                    <li data-i18n="legalNoticeVat">Umsatzsteuer-ID: [nur angeben, falls vorhanden]</li>
-                    <li data-i18n="legalNoticeInsurance">Berufshaftpflichtversicherung: [nur angeben, falls rechtlich erforderlich]</li>
-                    <li data-i18n="legalNoticeRegister">Registereintrag: [nur angeben, falls vorhanden]</li>
-                </ul>
-            </div>
-
-            <div class="subpage-card">
-                <h2 data-i18n="legalNoticeSection4Title">EU-Streitschlichtung</h2>
-                <p><span data-i18n="legalNoticeSection4Text1">Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:</span> <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noreferrer">https://ec.europa.eu/consumers/odr/</a>.</p>
-                <p data-i18n="legalNoticeSection4Text2">Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sofern keine gesetzliche Pflicht hierzu besteht.</p>
-            </div>
-
-            <div class="subpage-meta">
-               
-                <a class="subpage-home-link" href="./privacy-policy.html" data-i18n="goToPrivacyPolicy">Zur Datenschutzerklaerung</a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content-wrapper">
-            <div class="footer-left">
+    <body onload="database()">
+        <header>
+            <div class="header-content-limiter">
                 <div class="logo">
-                    <div class="logo-content">
-                        <p class="first-before">[</p>
-                        <p class="first">M</p>
-                        <p class="logo-seperator">/</p>
-                        <p class="last">P</p>
-                        <p class="first-before">]</p>
+                    <a href="../index.html" class="subpage-home-link" data-i18n-aria-label="backToHome">
+                        <div class="logo-content">
+                            <p class="first-before">[</p>
+                            <p class="first">M</p>
+                            <p class="logo-seperator">/</p>
+                            <p class="last">P</p>
+                            <p class="first-before">]</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="header-right">
+                    <div class="launch-toggle">
+                        <button id="launch-button-en" type="button">EN</button>
+                        <button id="launch-button-de" type="button">DE</button>
+                    </div>
+                    <div class="hamburg" onclick="mobil_menue();">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
                     </div>
                 </div>
-                <p>&copy; Maik Pankow 2026</p>
+                <nav id="nav" class="navigation">
+                    <ul class="ul">
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#about-me"
+                                data-i18n="navAbout">About me</a></li>
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#my-skills"
+                                data-i18n="navSkills">My Skills</a></li>
+                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="../index.html#portfolio"
+                                data-i18n="navProjects">Portfolio</a></li>
+                    </ul>
+                    <div class="banner-wrapper">
+                        <div class="banner"></div>
+                    </div>
+                    <div class="banner-wrapper-content">
+                        <div class="content-limitet">
+                            <div class="content-left">
+                                <p data-i18n="sayHi">Sag Hallo!</p>
+                                <span>maik.pankow@gmx.de</span>
+                            </div>
+                            <div class="content-right">
+                                <a class="icon-links" href="https://github.com/Maik649" target="_blank"
+                                    rel="noreferrer"><img src="../assets/img/Githup-icon.svg" alt="GitHub"></a>
+                                <a class="icon-links" href="mailto:maik.pankow@gmx.de"><img
+                                        src="../assets/img/Mail-icon.svg" alt="E-Mail"></a>
+                                <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/"
+                                    target="_blank" rel="noreferrer"><img src="../assets/img/LinkedIn-icon.svg"
+                                        alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            <div class="footer-right">
-                <div class="footer-link-legal-notice">
-                    <a href="./legal-notice.html" data-i18n="footerLegalNotice">Impressum</a>
-                </div>
-                <div class="footer-link-legal-notice">
-                    <a href="./privacy-policy.html" data-i18n="footerPrivacyPolicy">Datenschutzerklaerung</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        </header>
 
+        <main class="subpage-main">
+            <div class="subpage-container">
+                <div class="subpage-header">
+
+                    <h1 data-i18n="legalNoticeTitle">Impressum</h1>
+                </div>
+
+                <div class="subpage-card">
+                    <h2 data-i18n="legalNoticeSection1Title">Imprint</h2>
+                    <address>
+                        Maik Pankow<br>
+                        <span data-i18n="legalNoticeStreet">Straße und Hausnummer: [bitte ergänzen]</span><br>
+                        <span data-i18n="legalNoticeCity">PLZ und Ort: [bitte ergänzen]</span><br>
+                        <span data-i18n="legalNoticeCountry">Deutschland</span>
+                    </address>
+                    <p><span data-i18n="legalNoticeEmailLabel">E-Mail:</span> <a
+                            href="mailto:maik.pankow@gmx.de">maik.pankow@gmx.de</a></p>
+                </div>
+
+                <div class="subpage-card">
+                    <h2 data-i18n="legalNoticeSection2Title">Verantwortlich fuer den Inhalt nach Paragraph 18 Absatz 2
+                        MStV</h2>
+                    <p data-i18n="legalNoticeSection2Text">Maik Pankow, Anschrift wie oben.</p>
+                </div>
+
+                <div class="subpage-card">
+                    <h2 data-i18n="legalNoticeSection3Title">Berufliche Angaben</h2>
+                    <p data-i18n="legalNoticeSection3Text">Diese Website dient derzeit der Vorstellung meiner Person und
+                        meiner Projekte als Portfolio-Website.</p>
+
+                </div>
+                <div class="subpage-card">
+                    <h2 data-i18n="legalNoticeSection4Title">EU-Streitschlichtung</h2>
+                    <p><span data-i18n="legalNoticeSection4Text1">Die Europaeische Kommission stellt eine Plattform zur
+                            Online-Streitbeilegung bereit:</span> <a href="https://ec.europa.eu/consumers/odr/"
+                            target="_blank" rel="noreferrer">https://ec.europa.eu/consumers/odr/</a>.</p>
+                    <p data-i18n="legalNoticeSection4Text2">Ich bin nicht verpflichtet und nicht bereit, an
+                        Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sofern keine
+                        gesetzliche Pflicht hierzu besteht.</p>
+                </div>
+
+                <div class="subpage-meta">
+
+                    <a class="subpage-home-link" href="./privacy-policy.html" data-i18n="goToPrivacyPolicy">Zur
+                        Datenschutzerklaerung</a>
+                </div>
+            </div>
+        </main>
+<div class="contact-banner-wrapper">
+    <div class="contact-banner"></div>
+</div>
+        <footer>
+            <div class="footer-content-wrapper">
+                <div class="footer-left">
+                    <div class="logo">
+                        <div class="logo-content">
+                            <p class="first-before">[</p>
+                            <p class="first">M</p>
+                            <p class="logo-seperator">/</p>
+                            <p class="last">P</p>
+                            <p class="first-before">]</p>
+                        </div>
+                    </div>
+                    <p class="copyright">&copy; Maik Pankow 2026</p>
+                    <a class="footer-email" href="mailto:maik.pankow@gmx.de">maik.pankow@gmx.de</a>
+                    <div class="responsive-link-legal-notice">
+                        <a href="../subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="back-to-top-content">
+                        <a href="#hero-section"><img src="../assets/img/icons/to-top.svg" alt="Back to Top"></a>
+                    </div>
+                    <div class="footer-icons">
+                        <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img
+                                src="../assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>
+                        <a class="icon-links" href="mailto:maik.pankow@gmx.de"><img src="../assets/img/Mail-icon.svg"
+                                alt="Profile Picture Email"></a>
+                        <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/" target="_blank"><img
+                                src="../assets/img/LinkedIn-icon.svg" alt="Profile Picture LinkedIn"></a>
+                    </div>
+                    <div class="footer-link-legal-notice">
+                        <a href="../subpages/privacy-policy.html" target="_blank" data-i18n="footerPrivacyPolicy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
+    </body>
+
+</html>

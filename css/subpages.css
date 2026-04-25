@@ -39,8 +39,23 @@
     line-height: 1.5;
 }
 
+.contact-banner-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-banner {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    min-height: 250px;
+    left: 0;
+    -webkit-clip-path: polygon(0% 0%, 0% 35%, 120% 100%, 0% 101%);
+    clip-path: polygon(0% 0%, 0% 35%, 100% 100%, 0% 101%);
+}
+
 .subpage-card {
-    border: 4px solid var(--text-color);
     padding: clamp(20px, 4vw, 36px);
     display: flex;
     flex-direction: column;
@@ -50,7 +65,8 @@
 
 .subpage-card h2 {
     font-family: var(--font-family-syne-bold);
-    font-size: clamp(28px, 5vw, 42px);
+    font-size: clamp(28px, 5vw, 19px);
+    color: var(--secondary-color);
     margin: 0;
 }
 
@@ -94,7 +110,7 @@
 
 .subpage-home-link:hover,
 .subpage-card a:hover {
-    text-decoration: underline;
+    cursor: pointer;
 }
 
 .launch-toggle button.is-active {
