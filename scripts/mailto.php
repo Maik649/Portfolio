@@ -3,47 +3,52 @@
 // Keep API responses as clean JSON, even if internal warnings occur.
 ini_set('display_errors', '0');
 
-// CORS headers (for Angular / frontend apps)
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Content-Type: application/json; charset=utf-8");
+// CORS headers (for JSON/API clients)
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
 
-// ------------------------------------------------------------
-// WICHTIG:
-// Deine eigene Adresse in Zeile 18 setzen!
-// ------------------------------------------------------------
-
-// >>> DEINE EMAIL HIER EINTRAGEN <<<
+// Target mailbox
 $siteEmail = "maik.pankow@gmx.de";
+$redirectBase = '../index.html';
+
+/**
+ * Redirects the browser form flow back to the contact section with status.
+ *
+ * @param string $status
+ * @param string $redirectBasePath
+ * @return void
+ */
+function redirectWithMailStatus($status, $redirectBasePath)
+{
+    header('Location: ' . $redirectBasePath . '?mail=' . rawurlencode($status) . '#contact');
+    exit;
+}
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'OPTIONS':
-        // Preflight request
         http_response_code(200);
         exit;
 
     case 'POST':
         $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
         $isJsonRequest = stripos($contentType, 'application/json') !== false;
-        $redirectBase = '../index.html';
+
+        if ($isJsonRequest) {
+            header('Content-Type: application/json; charset=utf-8');
+        }
 
         // Support both JSON requests and normal form submissions.
         if ($isJsonRequest) {
             $json = file_get_contents('php://input');
             $params = json_decode($json, true);
 
-        // Saubere JSON-Fehlerprüfung
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            if ($isJsonRequest) {
+            if (json_last_error() !== JSON_ERROR_NONE) {
                 http_response_code(400);
                 echo json_encode(['success' => false, 'error' => 'Invalid JSON']);
-            } else {
-                header('Location: ' . $redirectBase . '?mail=invalid-json#contact');
+                exit;
             }
-            exit;
-        }
 
             $email = $params['email'] ?? '';
             $name = $params['name'] ?? '';
@@ -59,10 +64,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
             if ($isJsonRequest) {
                 http_response_code(400);
                 echo json_encode(['success' => false, 'error' => 'Invalid input data']);
+                exit;
             } else {
-                header('Location: ' . $redirectBase . '?mail=invalid-data#contact');
+                redirectWithMailStatus('invalid-data', $redirectBase);
             }
-            exit;
         }
 
         // Sanitize content
@@ -70,8 +75,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
         $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
 
-        // Empfängeradresse (nutzt die oben definierte Mail)
-        $recipient = $siteEmail; 
+        $recipient = $siteEmail;
         $subject = 'Contact Form Portfolio';
 
         $mailBody = "
@@ -85,50 +89,33 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = [];
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>'; 
+        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>';
         $headers[] = 'Reply-To: ' . $email;
-        $headers[] = 'Return-Path: ' . $siteEmail; 
+        $headerString = implode("\r\n", $headers);
 
-        // Send mail and capture warnings (e.g. SMTP not configured on XAMPP).
-        $mailWarning = '';
-        set_error_handler(function ($severity, $message) use (&$mailWarning) {
-            $mailWarning = $message;
-            return true;
-        });
-
-        $success = mail(
-            $recipient,
-            $subject,
-            $mailBody,
-            implode("\r\n", $headers),
-            '-f ' . $siteEmail 
-        );
-
-        restore_error_handler();
+        $success = mail($recipient, $subject, $mailBody, $headerString);
 
         if ($success) {
             if ($isJsonRequest) {
                 echo json_encode(['success' => true]);
+                exit;
             } else {
-                header('Location: ' . $redirectBase . '?mail=success#contact');
+                redirectWithMailStatus('success', $redirectBase);
             }
         } else {
-            $errorMessage = 'Mail delivery failed';
-            if ($mailWarning !== '') {
-                $errorMessage = 'Mail delivery failed: SMTP is not configured on the server.';
-            }
-
             if ($isJsonRequest) {
                 http_response_code(500);
-                echo json_encode(['success' => false, 'error' => $errorMessage]);
+                echo json_encode(['success' => false, 'error' => 'Mail delivery failed']);
+                exit;
             } else {
-                header('Location: ' . $redirectBase . '?mail=failed#contact');
+                redirectWithMailStatus('failed', $redirectBase);
             }
         }
 
         break;
 
     default:
+        header('Content-Type: application/json; charset=utf-8');
         http_response_code(405);
         echo json_encode(['success' => false, 'error' => 'Method not allowed']);
         exit;
