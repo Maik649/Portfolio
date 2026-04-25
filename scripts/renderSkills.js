@@ -44,6 +44,11 @@ let skillsImage = [
     name: "Matarial Desingn",
   },
 ];
+/**
+ * Loads all skill data into the target container.
+ *
+ * @returns {void}
+ */
 function loadeImage() {
    let skillsContent = document.getElementById("skill-icons");
   for (let index = 0; index < skillsImage.length; index++) {
@@ -52,6 +57,12 @@ function loadeImage() {
   }
 }
 
+/**
+ * Creates the HTML markup for a single skill.
+ *
+ * @param {number} index The position of the skill inside the array.
+ * @returns {string}
+ */
 function renderTemplade(index) {
   return `<div class="skill">
             <img src="${skills[index].img}" alt="${skills[index].name}">

@@ -1,4 +1,9 @@
 
+/**
+ * Initializes the page and starts the main render flows.
+ *
+ * @returns {Promise<void>}
+ */
 async function init() {
   await database();
   loadeImage();
@@ -6,6 +11,11 @@ async function init() {
   renderReference();
 }
 
+/**
+ * Opens or closes the mobile navigation menu.
+ *
+ * @returns {void}
+ */
 function mobil_menue() {
   document.getElementById("nav").classList.toggle("is-open");
   document.querySelector(".hamburg").classList.toggle("checked");
@@ -18,6 +28,12 @@ document.querySelectorAll(".nav_li").forEach((li) => {
   });
 });
 
+/**
+ * Activates the detail view of a project.
+ *
+ * @param {HTMLElement} currentImg The currently focused project element.
+ * @returns {void}
+ */
 function fadeIn_right(currentImg) {
   const projectCard = currentImg?.closest(".project");
   const allProjects = document.querySelectorAll(".project");
@@ -37,6 +53,12 @@ function fadeIn_right(currentImg) {
   }
 }
 
+/**
+ * Deactivates the detail view of a project.
+ *
+ * @param {HTMLElement} currentProject The project element that is being left.
+ * @returns {void}
+ */
 function fadeOut_right(currentProject) {
   const projectCard = currentProject?.closest(".project");
   if (projectCard) {

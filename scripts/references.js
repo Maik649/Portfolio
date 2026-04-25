@@ -1,3 +1,8 @@
+/**
+ * Renders all references into the dedicated container.
+ *
+ * @returns {void}
+ */
 function renderReference() {
   const refContent = document.getElementById("reference-content");
   if (!refContent) {
@@ -13,6 +18,12 @@ function renderReference() {
   }
 }
 
+/**
+ * Creates the HTML markup for a single reference card.
+ *
+ * @param {Object} ref The reference data for one card.
+ * @returns {string}
+ */
 function templateReference(ref) {
   const langData = translationMap[currentLanguage] || {};
   const refName = langData[ref.nameKey] || ref.refName;

@@ -1,8 +1,19 @@
 class PROJECTS {
+  /**
+    * Creates a project manager for the portfolio cards.
+   *
+    * @param {Array<Object>} projects The projects to render.
+   */
   constructor(projects = []) {
     this.projects = projects;
   }
 
+  /**
+    * Renders all projects into the specified container.
+   *
+    * @param {string} containerId The ID of the target container.
+   * @returns {void}
+   */
   render(containerId = "project") {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -11,8 +22,15 @@ class PROJECTS {
       .map((project) => this.renderCard(project))
       .join("");
   }
-
+  /**
+    * Creates the HTML markup for a single project card.
+   *
+    * @param {Object} project The project object with all display information.
+   * @returns {string}
+   */
   renderCard(project) {
+    const projectTextKey = `projectInfosText${project.id}`;
+
     return `
       <div class="project" onmouseenter="fadeIn_right(this)" onmouseleave="fadeOut_right(this)">
       <div class="project-content-left">
@@ -22,7 +40,7 @@ class PROJECTS {
           <div class="project-content-right">
             <h2>${project.title}</h2>
             <p class="project-tech" >${project.tech}</p>
-            <span data-i18n="projectInfosText">${project.text}</span>
+            <span data-i18n="${projectTextKey}">${project.text}</span>
               <div class="button-content">
                 <a class="--primary-button" href="${project.link}" target="_blank">Github</a>
                 <a class="--primary-button" href="${project.link2}" target="_blank">Live</a>
@@ -34,15 +52,20 @@ class PROJECTS {
   }
 }
 
+/**
+ * Creates the project data and renders the project section.
+ *
+ * @returns {void}
+ */
 function renderProject() {
   const projectsData = [
     {
       id: 1,
-      img: "./assets/img/Pollo-loco-photo.svg",
+      img: "./assets/img/El-polo-loco.png",
       title: "El Polo Loco",
       tech: "HTML | CSS | JavaScript",
-      text: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-      link: "",
+      text: "El Pollo Loco ist ein kleines Jump-and-Run-Spiel. Sammle Münzen und Flaschen und besiege das Endboss-Chicken.",
+      link: "https://github.com/Maik649/El-Polo-Loco",
       link2: "https://elpolooco.maikpankow.de",
     },
     {
@@ -50,19 +73,19 @@ function renderProject() {
       img: "./assets/img/join photos .svg",
       title: "Join",
       tech: "JavaScript | Firebase",
-      text: "",
-      link: "",
+      text: "Join ist ein Kanban-Tool zur strukturierten Aufgabenplanung im Team. Erstelle Tickets, weise Verantwortlichkeiten zu und behalte Deadlines im Blick.",
+      link: "https://github.com/Maik649/join-Privat",
       link2: "https://join.maikpankow.de",
     },
-    {
-      id: 3,
-      img: "./assets/img/daBubble-photo.svg",
-      title: "DABubble",
-      tech: "Angular | TypeScript",
-      text: "",
-      link: "",
-      link2: "",
-    },
+    // {
+    //   id: 3,
+    //   img: "./assets/img/daBubble-photo.svg",
+    //   title: "DABubble",
+    //   tech: "Angular | TypeScript",
+    //   text: "DABubble ist eine Slack-Klon-App. Sie verbessert die Teamkommunikation mit intuitiver Benutzeroberflaeche, Echtzeit-Messaging und klarer Kanalstruktur.",
+    //   link: "",
+    //   link2: "",
+    // },
   ];
 
   const projects = new PROJECTS(projectsData);

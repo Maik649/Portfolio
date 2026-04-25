@@ -6,12 +6,22 @@ let translationMap = {};
 let currentLanguage = localStorage.getItem("portfolio-language") || "de";
 
 if (typeof window.mobil_menue !== "function") {
+  /**
+    * Opens or closes the mobile navigation menu as a fallback.
+   *
+   * @returns {void}
+   */
   window.mobil_menue = function mobil_menue() {
     document.getElementById("nav")?.classList.toggle("is-open");
     document.querySelector(".hamburg")?.classList.toggle("checked");
   };
 }
 
+/**
+ * Loads the translation data and initializes language switching.
+ *
+ * @returns {Promise<void>}
+ */
 async function database() {
   const connect = await fetch(TRANSLATE_DB);
   translationMap = await connect.json();
@@ -20,6 +30,11 @@ async function database() {
   setLanguage(currentLanguage);
 }
 
+/**
+ * Connects the language buttons to their matching actions.
+ *
+ * @returns {void}
+ */
 function setupLanguageButtons() {
   const buttonDe = document.getElementById("launch-button-de");
   const buttonEn = document.getElementById("launch-button-en");
@@ -35,6 +50,12 @@ function setupLanguageButtons() {
   }
 }
 
+/**
+ * Activates a language and re-renders the translated content.
+ *
+ * @param {string} language The language code to apply.
+ * @returns {void}
+ */
 function setLanguage(language) {
   if (!translationMap[language]) {
     return;
@@ -56,6 +77,11 @@ function setLanguage(language) {
   }
 }
 
+/**
+ * Marks the currently active language button.
+ *
+ * @returns {void}
+ */
 function updateLanguageButtons() {
   const buttonDe = document.getElementById("launch-button-de");
   const buttonEn = document.getElementById("launch-button-en");
@@ -64,6 +90,11 @@ function updateLanguageButtons() {
   buttonEn?.classList.toggle("is-active", currentLanguage === "en");
 }
 
+/**
+ * Applies all available translations to the DOM elements.
+ *
+ * @returns {void}
+ */
 function renderTemplate() {
   const languageData = translationMap[currentLanguage] || {};
   const translatableElements = document.querySelectorAll("[data-i18n]");
