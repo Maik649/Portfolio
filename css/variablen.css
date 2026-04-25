@@ -228,11 +228,11 @@
     .--primary-button {
         height: 46px;
         font-size: 20px;
-        width: 200px;
+        width: 212px;
     }
 
     .--primary-button:hover {
-        width: 210px;
+        width: 220px;
     }
 
     .--margin-left {

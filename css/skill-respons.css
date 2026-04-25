@@ -22,8 +22,10 @@
     }
 
     .pfeil-bottom-right img {
-        width: 200px;
+        width: 175px;
         height: auto;
+        --arrow-scroll-range-start: 20%;
+        --arrow-scroll-range-end: 52%;
     }
 }
 

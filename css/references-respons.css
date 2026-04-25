@@ -30,8 +30,15 @@
     }
 
     .references-content-wrapper .pfeil-bottom-left img {
-        width: 200px;
+        width: 175px;
         height: auto;
+    }
+
+    .references-content-wrapper .pfeil-bottom-left img  {
+        width: 175px;
+        height: auto;
+        --arrow-scroll-range-start: 70%;
+        --arrow-scroll-range-end: 100%;
     }
 }
 
