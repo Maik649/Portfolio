@@ -76,13 +76,12 @@ article {
 .portrait-wrapper {
     position: relative;
     display: inline-block;
-    margin: 72px 0 0 230px;
+    margin: 0px 0 0 230px;
 }
 
 .about-content-right .portrait {
-    width: clamp(200px, 100vw, 453px);
-    height: clamp(200px, 100vw, 453px);
-    object-fit: cover;
+    width: clamp(200px, 100vw, 350px);
+    object-fit: contain;
     border: none;
     padding: 0;
     display: block;
@@ -149,9 +148,9 @@ article {
     }
 
     .about-content-right .portrait {
-        width: clamp(200px, 35vw, 453px);
-        height: clamp(200px, 35vw, 453px);
-        object-fit: cover;
+        width: clamp(200px, 35vw, 350px);
+        object-fit: contain;
+        height: auto;
         border: 2px solid transparent;
         padding: 0;
     }
@@ -262,21 +261,23 @@ article {
     }
 
     .about-content-right .portrait {
-        width: clamp(200px, 80vw, 453px);
-        height: clamp(200px, 80vw, 453px);
-        object-fit: cover;
+        width: clamp(200px, 75vw, 350px);
+        height: auto;
+        object-fit: contain;
         border: 2px solid transparent;
         padding: 0;
         margin: 0px 0;
     }
 
     .about-content-right img {
-        width: clamp(167px, 30vw, 453px);
+        width: clamp(167px, 30vw, 350px);
     }
 
     .about-content-right .pfeil-bottom-left img {
-        width: 200px;
+        width: 175px;
         height: auto;
+        --arrow-scroll-range-start: 9%;
+        --arrow-scroll-range-end: 23%;
     }
 }
 
@@ -316,6 +317,7 @@ article {
 
     .about-content-right .portrait {
         width: clamp(280px, 55vw, 430px);
-        height: clamp(280px, 55vw, 430px);
+        height: auto;
+        object-fit: contain;
     }
 }
