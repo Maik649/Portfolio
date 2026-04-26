@@ -19,6 +19,11 @@ img {
     height: auto;
 }
 
+.logo-link{
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     display: flex;
     background-color: var(--primary-color);
