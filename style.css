@@ -36,7 +36,6 @@ main {
 
 section {
     width: 100%;
-    min-height: 100vh;
     z-index: 0;
     margin: 0;
     padding: 0;

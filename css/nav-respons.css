@@ -1,6 +1,7 @@
 .content-limitet {
     flex-direction: column;
     padding: 0 24px;
+    max-width: var(--limited-width);
 }
 
 .banner-wrapper-content {
@@ -318,6 +319,7 @@ ul {
     .content-limitet {
         flex-direction: column;
         align-items: center;
+        max-width: var(--limited-width);
     }
 
     .content-left p,

@@ -21,6 +21,7 @@
 
     .project:nth-child(2) .project-content-left {
         order: 2;
+        left: 20%;
     }
 
     .project:nth-child(2) span {
@@ -70,11 +71,35 @@
 
     .project-content-left .project-image {
         width: 100%;
+        opacity: 1;
+    }
 
+    .project-content-left::after {
+        opacity: 1;
+        transform: translate(10px, 10px);
+    }
+
+    .project:nth-child(even) .project-content-left::after {
+        transform: translate(-10px, 10px);
+    }
+
+    .project-extra-icon {
+        opacity: 1;
+        right: -24px;
+    }
+.project-extra-icon {
+    width: 34px;
+    height: 34px;
+}
+    .project:nth-child(even) .project-extra-icon {
+        left: -30px;
+        right: auto;
     }
 
     .project-content-right {
         width: 80%;
+        opacity: 1;
+        transform: none;
     }
 }
 
@@ -93,5 +118,3 @@
         font-size: 36px;
     }
 }
-
-@media only screen and (max-width:320px) {}

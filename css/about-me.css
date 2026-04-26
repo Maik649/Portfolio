@@ -10,9 +10,7 @@
     flex-direction: row;
     gap: 20px;
     margin: 110px 0 0 0;
-    max-width: var(--limitet-width);
-    width: 100%;
-    min-height: 100vh;
+    max-width: var(--limited-width);
     height: auto;
     padding: 35px;
 }

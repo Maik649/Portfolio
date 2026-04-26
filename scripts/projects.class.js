@@ -46,7 +46,7 @@ class PROJECTS {
                 <a class="--primary-button" href="${project.link2}" target="_blank">Live</a>
               </div>
           </div>
-          <span class="project-id">0${project.id}/04</span>
+          <span class="project-id">0${project.id}/02</span>
       </div>
     `;
   }

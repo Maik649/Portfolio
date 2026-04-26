@@ -1,5 +1,5 @@
 .header-content-limiter {
-    max-width: var(--limitet-width);
+    max-width: var(--limited-width);
     display: flex;
     justify-content: space-between;
     align-items: center;

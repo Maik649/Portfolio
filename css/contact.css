@@ -1,3 +1,13 @@
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: var(--limited-width);
+}
+
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -25,7 +35,7 @@
 .contact-banner {
     background: rgb(0, 0, 0);
     width: 100%;
-    min-height: 250px;
+    min-height: 150px;
     left: 0;
     -webkit-clip-path: polygon(0% 0%, 0% 35%, 120% 100%, 0% 101%);
     clip-path: polygon(0% 0%, 0% 35%, 100% 100%, 0% 101%);
@@ -85,7 +95,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -212,7 +222,7 @@ input[type="checkbox"]:checked:hover {
     display: block;
     color: red;
     font-size: 14px;
-    min-height: 15px;
+    min-height: 19px;
     width: 100%;
     text-align: center;
     opacity: 0;
@@ -223,7 +233,7 @@ input[type="checkbox"]:checked:hover {
 .contact-form .error-message.error-state {
     width: 100%;
     max-width: 600px;
-    height: 15px;
+    height: 19px;
     font-size: 16px;
     color: #ff6b6b;
     opacity: 1;
@@ -261,8 +271,8 @@ input[type="checkbox"]:checked:hover {
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     opacity: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -315,7 +325,7 @@ input[type="checkbox"]:checked:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 90px 24px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -327,12 +337,13 @@ input[type="checkbox"]:checked:hover {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    margin: 92px 0;
 }
 
 .status-modal__backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(126, 126, 126, 0.72);
+    background: rgb(220 220 220 / 16%);
     backdrop-filter: blur(6px);
 }
 
@@ -369,12 +380,12 @@ input[type="checkbox"]:checked:hover {
 .status-modal__close {
     position: absolute;
     top: 12px;
-    right: 12px;
+    left: 80%;
     width: 42px;
     height: 42px;
     border: none;
     background: transparent;
-    color: var(--text-color-light);
+    color: var(--text-color);
     font-size: 34px;
     line-height: 1;
     cursor: pointer;

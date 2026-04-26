@@ -140,12 +140,12 @@ ul {
     padding: 0 0 64px;
 }
 
-.content-limitet {
+.content-limited {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--limitet-width);
+    max-width: var(--limited-width);
     width: 100%;
 }
 

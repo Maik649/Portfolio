@@ -39,63 +39,67 @@
     </head>
 
     <body onload="init()">
-        <header>
-            <div class="header-content-limiter">
-                <div class="logo">
-                    <div class="logo-content">
-                        <p class="first-before">[</p>
-                        <p class="first">M</p>
-                        <p class="logo-seperator">/</p>
-                        <p class="last">P</p>
-                        <p class="first-before">]</p>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="launch-toggle">
-                        <button id="launch-button-en">EN</button>
-                        <button id="launch-button-de">DE</button>
-                    </div>
-                   
-                    <div class="hamburg" onclick="mobil_menue();">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </div>
-
-                </div>
-                
-                <nav id="nav" class="navigation">
-                    <ul class="ul">
-                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#about-me" data-i18n="navAbout">About me</a></li>
-                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#my-skills" data-i18n="navSkills">My Skills</a>
-                        </li>
-                        <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#portfolio" data-i18n="navProjects">Projects</a>
-                        </li>
-                    </ul>
-                    <div class="banner-wrapper">
-                        <div class="banner">
-                        </div>
-                    </div>
-                        <div class="banner-wrapper-content">
-                            <div class="content-limitet">
-                            <div class="content-left">
-                                <p data-i18n="sayHi">Say Hi!</p>
-                                <span>maik.pankow@gmx.de</span>
-                             </div>
-                            <div class="content-right">
-                               <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>
-                            <a class="icon-links" href="#contact"><img src="./assets/img/Mail-icon.svg" alt="Profile Picture Email"></a>
-                            <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/" target="_blank"><img src="./assets/img/LinkedIn-icon.svg" alt="Profile Picture LinkedIn"></a>
+            <section id="hero-section" class="hero-section">
+                <header>
+                    <div class="header-content-limiter">
+                        <div class="logo">
+                            <div class="logo-content">
+                                <p class="first-before">[</p>
+                                <p class="first">M</p>
+                                <p class="logo-seperator">/</p>
+                                <p class="last">P</p>
+                                <p class="first-before">]</p>
                             </div>
                         </div>
+                        <div class="header-right">
+                            <div class="launch-toggle">
+                                <button id="launch-button-en">EN</button>
+                                <button id="launch-button-de">DE</button>
+                            </div>
+                
+                            <div class="hamburg" onclick="mobil_menue();">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                
+                        </div>
+                
+                        <nav id="nav" class="navigation">
+                            <ul class="ul">
+                                <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#about-me"
+                                        data-i18n="navAbout">About me</a></li>
+                                <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#my-skills"
+                                        data-i18n="navSkills">My Skills</a>
+                                </li>
+                                <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#portfolio"
+                                        data-i18n="navProjects">Projects</a>
+                                </li>
+                            </ul>
+                            <div class="banner-wrapper">
+                                <div class="banner">
+                                </div>
+                            </div>
+                            <div class="banner-wrapper-content">
+                                <div class="content-limited">
+                                    <div class="content-left">
+                                        <p data-i18n="sayHi">Say Hi!</p>
+                                        <span>maik.pankow@gmx.de</span>
+                                    </div>
+                                    <div class="content-right">
+                                        <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img
+                                                src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>
+                                        <a class="icon-links" href="#contact"><img src="./assets/img/Mail-icon.svg"
+                                                alt="Profile Picture Email"></a>
+                                        <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/"
+                                            target="_blank"><img src="./assets/img/LinkedIn-icon.svg"
+                                                alt="Profile Picture LinkedIn"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
-            </div>
-        </header>
-      
-    
-
-            <section id="hero-section" class="hero-section">
+                </header>
                 <div class="content-wrapper">
                     <div class="top-headline">
                         <h1>Frontend Developer</h1>
@@ -184,11 +188,11 @@
                 </div>
             </section>
             <section id="contact" class="contact-section">
-
                 <div class="contact-banner-wrapper">
                     <div class="contact-banner"></div>
                 </div>
                 <div class="contact-content-header">
+                    <div class="contact-wrapper">
                     <h2 class="--primary-h1" data-i18n="sayHi">Say Hi!</h2>
                     <span class="headlin-description" data-i18n="contactDescription">Want to discuss a new
                         project?</span>
@@ -230,6 +234,7 @@
                     </div>
                    
                 </div>
+                </div>
             </section>
         <footer>
                 <div class="footer-content-wrapper">
@@ -246,7 +251,7 @@
                         <p class="copyright">&copy; Maik Pankow 2026</p>
                         <a class="footer-email" href="mailto:maik.pankow@gmx.de">maik.pankow@gmx.de</a>
                         <div class="responsive-link-legal-notice">
-                            <a href="./subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
+                            <a href="./subpages/legal-notice.html" data-i18n="footerLegalNotice">Legal Notice</a>
                         </div>
                     </div>
                     <div class="footer-right">
@@ -259,7 +264,7 @@
                             <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/" target="_blank"><img src="./assets/img/LinkedIn-icon.svg" alt="Profile Picture LinkedIn"></a>
                         </div>
                         <div class="footer-link-legal-notice">
-                            <a href="./subpages/legal-notice.html" target="_blank" data-i18n="footerLegalNotice">Legal Notice</a>
+                            <a href="./subpages/legal-notice.html" data-i18n="footerLegalNotice">Legal Notice</a>
                         </div>
                     </div>
                 </div>

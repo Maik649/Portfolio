@@ -22,7 +22,7 @@
     flex-direction: column;
     gap: 60px;
     width: 100%;
-    max-width: var(--limitet-width);
+    max-width: var(--limited-width);
     margin-top: 30px;
 }
 
@@ -71,6 +71,7 @@
 
 .project:is(:hover, :has(.project-content-right.is-active) .project-image) .project-content-left::after {
     opacity: 1;
+    flex-direction: row-reverse;
 }
 
 .project:is(:hover, :has(.project-content-right.is-active)) .project-image {
@@ -132,6 +133,11 @@
     pointer-events: none;
     opacity: 0;
     transform: translateY(-50%) scale(0.5);
+}
+
+.project:nth-child(even) .project-extra-icon {
+    left: 0px;
+    right: auto;
 }
 
 .project.is-active .project-extra-icon {

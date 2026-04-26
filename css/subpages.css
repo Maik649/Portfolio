@@ -79,43 +79,12 @@
     font-style: normal;
 }
 
-.subpage-card ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    margin: 0;
-    padding-left: 22px;
-}
-
-.subpage-card a,
-.subpage-home-link {
-    color: var(--secondary-color);
-}
-
 .subpage-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 16px 28px;
     font-family: var(--font-family-overpass-regular);
     font-size: 18px;
-}
-
-.subpage-home-link {
-    width: fit-content;
-    font-family: var(--font-family-overpass-bold);
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.subpage-home-link:hover,
-.subpage-card a:hover {
-    cursor: pointer;
-}
-
-.launch-toggle button.is-active {
-    background-color: white;
-    border-color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 768px) {
