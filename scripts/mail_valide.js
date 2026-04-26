@@ -50,6 +50,54 @@ function setFieldState(messageElement, inputElement, isValid, message) {
 
 // Only letters, spaces, hyphens and apostrophes — no HTML/script tags or special chars
 const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ'' \-]{2,100}$/;
+const emailRegex = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/;
+const scriptRegex = /[<>]|script\b|javascript\s*:|on\w+\s*=|data\s*:/i;
+const MIN_MESSAGE_LENGTH = 10;
+
+/**
+ * Checks whether a name value is valid.
+ *
+ * @param {string} value The name value.
+ * @returns {boolean}
+ */
+function isNameValueValid(value) {
+    return value.length >= 5 && nameRegex.test(value);
+}
+
+/**
+ * Checks whether an email value is valid.
+ *
+ * @param {string} value The email value.
+ * @returns {boolean}
+ */
+function isEmailValueValid(value) {
+    return value !== "" && !/[<>]/.test(value) && emailRegex.test(value);
+}
+
+/**
+ * Checks whether a message value is valid.
+ *
+ * @param {string} value The message value.
+ * @returns {boolean}
+ */
+function isMessageValueValid(value) {
+    return value.length >= MIN_MESSAGE_LENGTH && !scriptRegex.test(value);
+}
+
+/**
+ * Returns an error message containing the minimum message length and remaining chars.
+ *
+ * @param {number} currentLength Current message length.
+ * @returns {string}
+ */
+function getMessageMinLengthError(currentLength) {
+    const remaining = Math.max(0, MIN_MESSAGE_LENGTH - currentLength);
+    const baseText = getTranslation("errorMessageRequired", "Your message is required.");
+    const minLengthText = getTranslation("errorMessageMinLength", "Minimum length: {min} characters.").replace("{min}", String(MIN_MESSAGE_LENGTH));
+    const remainingText = getTranslation("errorMessageRemaining", "Remaining: {remaining}.").replace("{remaining}", String(remaining));
+
+    return `${baseText} ${minLengthText} ${remainingText}`.trim();
+}
 
 /**
  * Validates the name field for minimum length and allowed characters.
@@ -63,7 +111,7 @@ function validateName() {
         setFieldState(isRequiredMessageName, vollName, false, message);
         return false;
     }
-    if (!nameRegex.test(value)) {
+    if (!isNameValueValid(value)) {
         const message = getTranslation("errorNameInvalid", "Invalid characters in name. No HTML or special characters allowed.");
         setFieldState(isRequiredMessageName, vollName, false, message);
         return false;
@@ -79,18 +127,12 @@ function validateName() {
  */
 function validateEmail() {
     const value = email.value.trim();
-    const emailRegex = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/;
     if (value === "") {
         const message = getTranslation("errorEmailRequired", "Your email is required.");
         setFieldState(isRequiredMessageEmail, email, false, message);
         return false;
     }
-    if (/[<>]/.test(value)) {
-        const message = getTranslation("errorEmailInvalid", "Please enter a valid email address.");
-        setFieldState(isRequiredMessageEmail, email, false, message);
-        return false;
-    }
-    if (!emailRegex.test(value)) {
+    if (!isEmailValueValid(value)) {
         const message = getTranslation("errorEmailInvalid", "Please enter a valid email address.");
         setFieldState(isRequiredMessageEmail, email, false, message);
         return false;
@@ -99,8 +141,6 @@ function validateEmail() {
     return true;
 }
 
-const scriptRegex = /[<>]|script\b|javascript\s*:|on\w+\s*=|data\s*:/i;
-
 /**
  * Validates the message for minimum length and disallowed content.
  *
@@ -108,12 +148,12 @@ const scriptRegex = /[<>]|script\b|javascript\s*:|on\w+\s*=|data\s*:/i;
  */
 function validateMessage() {
     const value = userMessage.value.trim();
-    if (value.length < 10) {
-        const message = getTranslation("errorMessageRequired", "Your message is required (min. 10 characters).");
+    if (value.length < MIN_MESSAGE_LENGTH) {
+        const message = getMessageMinLengthError(value.length);
         setFieldState(isRequiredMessage, userMessage, false, message);
         return false;
     }
-    if (scriptRegex.test(value)) {
+    if (!isMessageValueValid(value)) {
         const message = getTranslation("errorMessageInvalid", "Invalid content detected. No HTML or script code allowed.");
         setFieldState(isRequiredMessage, userMessage, false, message);
         return false;
@@ -137,8 +177,48 @@ function validatePrivacy() {
  * @returns {void}
  */
 function checkFormValidity() {
-    const isValid = validateName() && validateEmail() && validateMessage() && accept_police.checked;
+    const isValid = isNameValueValid(vollName.value.trim())
+        && isEmailValueValid(email.value.trim())
+        && isMessageValueValid(userMessage.value.trim())
+        && accept_police.checked;
     sendenButton.disabled = !isValid;
+}
+
+/**
+ * Binds a live validation handler to an input event.
+ *
+ * @param {HTMLElement} element The element to observe.
+ * @param {() => boolean} validator The validator callback.
+ * @returns {void}
+ */
+function bindLiveValidation(element, validator) {
+    element.addEventListener("input", () => {
+        validator();
+        checkFormValidity();
+    });
+}
+
+/**
+ * Initializes live validation while typing.
+ *
+ * @returns {void}
+ */
+function initLiveValidation() {
+    if (!vollName || !email || !userMessage || !accept_police || !sendenButton) {
+        return;
+    }
+    bindLiveValidation(vollName, validateName);
+    bindLiveValidation(email, validateEmail);
+    bindLiveValidation(userMessage, validateMessage);
+    accept_police.addEventListener("change", checkFormValidity);
+    const form = sendenButton.closest("form");
+    form?.addEventListener("submit", (event) => {
+        const isFormValid = validateName() && validateEmail() && validateMessage() && accept_police.checked;
+        checkFormValidity();
+        if (!isFormValid) {
+            event.preventDefault();
+        }
+    });
 }
 
 /**
@@ -184,16 +264,18 @@ function closeStatusModal() {
 function openStatusModal(mailStatus) {
     const modal = document.getElementById("status-modal");
     const dialog = modal?.querySelector(".status-modal__dialog");
+    const kicker = modal?.querySelector("#status-modal-kicker");
+    const title = modal?.querySelector("#status-modal-title");
+    const message = modal?.querySelector("#status-modal-message");
     const config = getMailStatusConfig(mailStatus);
 
-    if (!modal || !dialog || !config) {
+    if (!modal || !dialog || !kicker || !title || !message || !config) {
         return;
     }
 
-    document.getElementById("status-modal-kicker").textContent = config.kicker;
-    document.getElementById("status-modal-title").textContent = config.title;
-    document.getElementById("status-modal-message").textContent = config.message;
-    document.getElementById("status-modal-button").textContent = getTranslation("modalClose", "Close");
+    kicker.textContent = config.kicker;
+    title.textContent = config.title;
+    message.textContent = config.message;
     dialog.classList.toggle("is-success", config.state === "success");
     dialog.classList.toggle("is-error", config.state === "error");
     modal.classList.add("is-open");
@@ -233,7 +315,11 @@ function renderMailStatusFromUrl() {
 }
 
 document.addEventListener("click", (event) => {
-    if (event.target.closest("[data-close-status-modal='true']") || event.target.id === "status-modal-button") {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+
+    if (event.target.closest("[data-close-status-modal='true']")) {
         closeStatusModal();
     }
 });
@@ -244,7 +330,11 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", renderMailStatusFromUrl);
+document.addEventListener("DOMContentLoaded", () => {
+    initLiveValidation();
+    checkFormValidity();
+    renderMailStatusFromUrl();
+});
 
 
 
