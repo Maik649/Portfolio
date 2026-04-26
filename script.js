@@ -5,10 +5,29 @@
  * @returns {Promise<void>}
  */
 async function init() {
+  initSectionReveal();
   await database();
   loadeImage();
   renderProject();
   renderReference();
+}
+
+/**
+ * Reveals sections with a slide-in animation from right to left.
+ *
+ * @returns {void}
+ */
+function initSectionReveal() {
+  const revealSections = document.querySelectorAll(".section-reveal");
+  if (!revealSections.length) return;
+  if (!("IntersectionObserver" in window)) return revealSections.forEach((section) => section.classList.add("is-visible"));
+  const revealOnView = (entries, currentObserver) => entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("is-visible");
+    currentObserver.unobserve(entry.target);
+  });
+  const observer = new IntersectionObserver(revealOnView, { threshold: 0.2, rootMargin: "0px 0px -5% 0px" });
+  revealSections.forEach((section) => observer.observe(section));
 }
 
 /**
