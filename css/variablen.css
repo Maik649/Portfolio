@@ -102,23 +102,6 @@
     animation-range: var(--arrow-scroll-range-start, 20%) var(--arrow-scroll-range-end, 35%);
 }
 
-@keyframes scroll-down {
-    0% {
-        opacity: 0;
-        transform: translateY(250px);
-    }
-
-    50% {
-        opacity: 0.3;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 @keyframes arrowFloatLeft {
     0% {
