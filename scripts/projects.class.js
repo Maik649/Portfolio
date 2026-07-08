@@ -46,7 +46,7 @@ class PROJECTS {
                 <a class="--primary-button" href="${project.link2}" target="_blank">Live</a>
               </div>
           </div>
-          <span class="project-id">0${project.id}/02</span>
+          <span class="project-id">0${project.id}/03</span>
       </div>
     `;
   }
@@ -74,18 +74,18 @@ function renderProject() {
       title: "Join",
       tech: "JavaScript | Firebase",
       text: "Join ist ein Kanban-Tool zur strukturierten Aufgabenplanung im Team. Erstelle Tickets, weise Verantwortlichkeiten zu und behalte Deadlines im Blick.",
-      link: "https://github.com/Maik649/join-Privat",
+      link: "https://github.com/Maik649/join-privat",
       link2: "https://join.maikpankow.de",
     },
-    // {
-    //   id: 3,
-    //   img: "./assets/img/daBubble-photo.svg",
-    //   title: "DABubble",
-    //   tech: "Angular | TypeScript",
-    //   text: "DABubble ist eine Slack-Klon-App. Sie verbessert die Teamkommunikation mit intuitiver Benutzeroberflaeche, Echtzeit-Messaging und klarer Kanalstruktur.",
-    //   link: "",
-    //   link2: "",
-    // },
+    {
+      id: 3,
+      img: "./assets/img/trockenanker.png",
+      title: "Trocken Anker",
+      tech: "HTML | JavaScript ",
+      text: "Trocken Anker ist eine Website für Suchthilfe. Sie bietet Informationen, Ressourcen und Unterstützung für Menschen, die mit Suchtproblemen kämpfen.",
+      link: "https://github.com/Maik649/Trocken-Anker",
+      link2: "https://trockenanker.maikpankow.de",
+    },
   ];
 
   const projects = new PROJECTS(projectsData);

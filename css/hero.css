@@ -31,7 +31,7 @@
     height: 1.1em;
     word-wrap: break-word;
     white-space: nowrap;
-    animation: typing 1.5s steps(10, end);
+    animation: typing 1.5s steps(10, start) forwards;
     color: var(--secondary-color);
     font-family: var(--font-family-overpass-bold);
     font-weight: var(--font-weight-bold);
@@ -170,6 +170,13 @@
         width: clamp(300px, 100vw, 1440px);
     }
 
+    .myAnimationsText {
+        width: 100%;
+        top: 0%;
+        left: 80%;
+        transform: translate(-50%, -50%)
+    }
+
     .hero-section {
         background-color: var(--primary-color);
         display: flex;
@@ -261,6 +268,13 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .hero-section {
         padding: 110px 20px 40px;
+    }
+
+    .myAnimationsText {
+        width: 100%;
+        top: 0%;
+        left: 80%;
+        transform: translate(-50%, -50%);
     }
 
     .content-wrapper {
