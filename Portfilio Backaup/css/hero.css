@@ -26,6 +26,49 @@
     line-height: 100%;
 }
 
+.myAnimationsText {
+    overflow: hidden;
+    height: 1.1em;
+    word-wrap: break-word;
+    white-space: nowrap;
+    animation: typing 1.5s steps(10, start) forwards;
+    color: var(--secondary-color);
+    font-family: var(--font-family-overpass-bold);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(1rem, 4vw, 48px);
+    width: 305px;
+    top: -35px;
+    left: 67%;
+    position: relative;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0;
+        width: 0
+    }
+
+    to {
+        opacity: 1;
+        width: 305px
+    }
+}
+
+.--fade-in {
+    width: 0;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+    }
+}
+
 .top-headline h1::after {
     display: block;
     position: relative;
@@ -37,16 +80,7 @@
     margin-top: max(3.5%);
 }
 
-.top-headline span {
-    position: relative;
-    top: -35px;
-    left: 30%;
-    font-family: var(--font-family-overpass-bold);
-    font-weight: var(--font-weight-bold);
-    font-size: clamp(1rem, 4vw, 48px);
-    color: var(--secondary-color);
-    margin: 0;
-}
+
 
 .bottom-headline {
     display: flex;
@@ -134,6 +168,13 @@
         gap: 50px;
         max-width: var(--limited-width);
         width: clamp(300px, 100vw, 1440px);
+    }
+
+    .myAnimationsText {
+        width: 100%;
+        top: 0%;
+        left: 80%;
+        transform: translate(-50%, -50%)
     }
 
     .hero-section {
@@ -227,6 +268,13 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .hero-section {
         padding: 110px 20px 40px;
+    }
+
+    .myAnimationsText {
+        width: 100%;
+        top: 0%;
+        left: 80%;
+        transform: translate(-50%, -50%);
     }
 
     .content-wrapper {

@@ -74,7 +74,7 @@ function renderProject() {
       title: "Join",
       tech: "JavaScript | Firebase",
       text: "Join ist ein Kanban-Tool zur strukturierten Aufgabenplanung im Team. Erstelle Tickets, weise Verantwortlichkeiten zu und behalte Deadlines im Blick.",
-      link: "https://github.com/Maik649/join-Privat",
+      link: "https://github.com/Maik649/join-privat",
       link2: "https://join.maikpankow.de",
     },
     {
