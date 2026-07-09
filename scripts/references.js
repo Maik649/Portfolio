@@ -38,7 +38,11 @@ function templateReference(ref) {
         </div>`;
 
 }
-
+/**
+ * Initializes the reference slider functionality.
+ *
+ * @returns {void}
+ */
 function initReferenceSlider() {
     const container = document.getElementById("reference-content");
     const prevBtn = document.getElementById("refPrev");
