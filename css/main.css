@@ -1617,7 +1617,7 @@ article {
     height: auto;
   }
   .about-content-left {
-    align-items: center;
+    align-items: flex-start;
   }
   .about-content-right .portrait {
     width: clamp(200px, 35vw, 350px);
@@ -1808,9 +1808,11 @@ article {
 }
 
 .reference-card {
-  flex-shrink: 0; /* Karten nicht stauchen */
+  flex-shrink: 0;
+  /* Karten nicht stauchen */
   scroll-snap-align: center;
-  width: min(450px, 80vw); /* Auf Mobile etwas kleiner */
+  width: min(450px, 80vw);
+  /* Auf Mobile etwas kleiner */
   /* ... Rest bleibt gleich */
 }
 
@@ -1953,6 +1955,12 @@ article {
     height: auto;
     --arrow-scroll-range-start: 70%;
     --arrow-scroll-range-end: 100%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .slider-wrapper {
+    gap: 8px;
+    padding: 0 15px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {

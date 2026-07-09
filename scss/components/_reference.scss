@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
 }
+
 .slider-wrapper {
     display: flex;
     align-items: center;
@@ -29,16 +30,21 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: var(--min-padding);
-    
+
     /* Scrollbar verstecken */
     scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .reference-card {
-    flex-shrink: 0;            /* Karten nicht stauchen */
+    flex-shrink: 0;
+    /* Karten nicht stauchen */
     scroll-snap-align: center;
-    width: min(450px, 80vw);   /* Auf Mobile etwas kleiner */
+    width: min(450px, 80vw);
+    /* Auf Mobile etwas kleiner */
     /* ... Rest bleibt gleich */
 }
 
@@ -58,6 +64,7 @@
         color: var(--secondary-color);
     }
 }
+
 .reference-content {
     display: flex;
     flex-direction: row;
@@ -154,7 +161,7 @@
         padding: 0;
     }
 
-    .slider-btn{
+    .slider-btn {
         display: none;
     }
 
@@ -193,6 +200,13 @@
         height: auto;
         --arrow-scroll-range-start: 70%;
         --arrow-scroll-range-end: 100%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .slider-wrapper {
+        gap: 8px;
+        padding: 0 15px;
     }
 }
 
