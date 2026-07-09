@@ -9,8 +9,8 @@ header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Target mailbox
-$siteEmail = "maik.pankow@gmx.de";
-$redirectBase = '../index.html';
+$siteEmail = "info@maikpankow.de";
+$redirectBase = '../index.html#hero-section';
 
 /**
  * Redirects the browser form flow back to the contact section with status.
