@@ -9,11 +9,11 @@ let skillsImage = [
 
   {
     img: "./assets/img/icons/18. Icons s3 (1).svg",
-    name: "Type Script",
+    name: "TypeScript",
   },
   {
     img: "./assets/img/icons/18. Icons s3 (2).svg",
-    name: "Javascript",
+    name: "JavaScript",
   },
   {
     img: "./assets/img/icons/18. Icons s3 (3).svg",
@@ -21,7 +21,7 @@ let skillsImage = [
   },
   {
     img: "./assets/img/icons/18. Icons s3 (4).svg",
-    name: "Css",
+    name: "CSS 3",
   },
   {
     img: "./assets/img/icons/18. Icons s3 (5).svg",
@@ -33,15 +33,15 @@ let skillsImage = [
   },
   {
     img: "./assets/img/icons/18. Icons s3 (7).svg",
-    name: "Git",
+    name: "Git / GitHub",
   },
   {
     img: "./assets/img/icons/18. Icons s3 (8).svg",
-    name: "Superbase",
+    name: "Supabase",
   },
   {
     img: "./assets/img/icons/18. Icons s3 (10).svg",
-    name: "Matarial Desingn",
+    name: "Material Design",
   },
 ];
 /**

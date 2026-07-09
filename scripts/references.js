@@ -36,6 +36,21 @@ function templateReference(ref) {
             <span class="reference-position --font-family-overpass-regular">${refPosition}</span>
             <span class="reference-text --font-family-overpass-regular">${refText}</span>
         </div>`;
+
+}
+
+function initReferenceSlider() {
+    const container = document.getElementById("reference-content");
+    const prevBtn = document.getElementById("refPrev");
+    const nextBtn = document.getElementById("refNext");
+    if (!container || !prevBtn || !nextBtn) return;
+
+    prevBtn.addEventListener("click", () => {
+        container.scrollBy({ left: -container.clientWidth, behavior: "smooth" });
+    });
+    nextBtn.addEventListener("click", () => {
+        container.scrollBy({ left: container.clientWidth, behavior: "smooth" });
+    });
 }
 
 const referenceData = [

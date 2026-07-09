@@ -10,6 +10,7 @@ async function init() {
   loadeImage();
   renderProject();
   renderReference();
+  initReferenceSlider();
 }
 
 /**

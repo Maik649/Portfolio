@@ -1,4 +1,6 @@
 # Ignore the following files and directories
-
+node_modules
 Portfolio Checkliste.docx
+package.json
 *.txt
+*.log

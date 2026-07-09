@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to my portfolio! I'm Maik Pankow, a passionate frontend developer based in Berlin. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating visually appealing and user-friendly websites. Explore my projects and skills to see how I can bring your ideas to life. Let's connect and collaborate on your next web development project!">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./css/variablen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/header-content.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="stylesheet" href="./css/nav-respons.css">
+        <link rel="stylesheet" href="./css/hero.css">
+        <link rel="stylesheet" href="./css/hamburger-menu.css">
+        <link rel="stylesheet" href="./css/about-me.css">
+        <link rel="stylesheet" href="./css/skill.css">
+        <link rel="stylesheet" href="./css/skill-respons.css">
+        <link rel="stylesheet" href="./css/projects.css">
+        <link rel="stylesheet" href="./css/projects-respons.css">
+        <link rel="stylesheet" href="./css/references.css">
+        <link rel="stylesheet" href="./css/references-respons.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <link rel="stylesheet" href="./css/footer-content.css">
+
+        <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Portfolio" />
+        <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+
+        <script src="script.js" defer></script>
+        <script src="./scripts/renderSkills.js" defer></script>
+        <script src="./scripts/translate.js" defer></script>
+        <script src="./scripts/references.js" defer></script>
+        <script src="./scripts/projects.class.js" defer></script>
+        <script src="./scripts/mail_valide.js" defer></script>
+    </head>
+
+    <body onload="init()">
+        <section id="hero-section" class="hero-section">
+            <header>
+                <div class="header-content-limiter">
+                    <div class="logo">
+                        <a class="logo-link" href="#hero-section">
+                            <div class="logo-content">
+                                <p class="first-before">[</p>
+                                <p class="first">M</p>
+                                <p class="logo-seperator">/</p>
+                                <p class="last">P</p>
+                                <p class="first-before">]</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header-right">
+                        <div class="launch-toggle">
+                            <button id="launch-button-en">EN</button>
+                            <button id="launch-button-de">DE</button>
+                        </div>
+
+                        <div class="hamburg" onclick="mobil_menue();">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+
+                    </div>
+
+                    <nav id="nav" class="navigation">
+                        <ul class="ul">
+                            <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#about-me"
+                                    data-i18n="navAbout">About me</a></li>
+                            <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#my-skills"
+                                    data-i18n="navSkills">My Skills</a>
+                            </li>
+                            <li onclick="mobil_menue()" class="nav_li"><a class="nav_li_a" href="#portfolio"
+                                    data-i18n="navProjects">Projects</a>
+                            </li>
+                        </ul>
+                        <div class="banner-wrapper">
+                            <div class="banner">
+                            </div>
+                        </div>
+                        <div class="banner-wrapper-content">
+                            <div class="content-limited">
+                                <div class="content-left">
+                                    <p data-i18n="sayHi">Say Hi!</p>
+                                    <span>info@maikpankow.de</span>
+                                </div>
+                                <div class="content-right">
+                                    <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img
+                                            src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>
+                                    <a class="icon-links" href="#contact"><img src="./assets/img/Mail-icon.svg"
+                                            alt="Profile Picture Email"></a>
+                                    <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/"
+                                        target="_blank"><img src="./assets/img/LinkedIn-icon.svg"
+                                            alt="Profile Picture LinkedIn"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="content-wrapper">
+                <div class="top-headline">
+                    <h1>Frontend Developer</h1>
+                    <span>Maik Pankow</span>
+
+                </div>
+                <div class="bottom-headline">
+                    <a href="#contact">info@maikpankow.de</a>
+                    <div class="scroll-down-btn">
+                        <img src="./assets/img/pfeil-bottom.svg" alt="pfeil-bottom">
+                        <span id="scroll-down-btn" data-i18n="scrollDown">Scroll Down</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="about-me" class="about-me scroll-down-indicator section-reveal reveal-from-left">
+            <div class="about-me-content-wrapper">
+                <div class="about-content-left">
+                    <h1 id="headline-about-me" class="--primary-h1" data-i18n="headline"></h1>
+                    <article id="infos" class="infotext" data-i18n="text">
+
+                    </article>
+                    <div class="extra-info">
+                        <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in
+                                Berlin</span></span>
+                        <span class="icons"><img src="./assets/img/laptop_chromebook.svg" alt=""><span
+                                data-i18n="remote">open to work Remote</span></span>
+                    </div>
+                    <a class="--primary-button --margin-left" href="#contact" data-i18n="letsTalk">Let's Talk</a>
+                </div>
+                <div class="about-content-right">
+                    <span class="portrait-wrapper">
+                        <img class="portrait" src="./assets/img/portrait.png" alt="portrait">
+                    </span>
+
+
+                    <div class="pfeil-bottom-left">
+                        <img src="./assets/img/pfeil-bottom-left.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="my-skills" class="skill-section scroll-down-indicator section-reveal reveal-from-right">
+            <div class="my-skill-content-wrapper">
+
+                <h1 class="--primary-h1 --margin-top-negative" data-i18n="skillsHeadline">My Skills</h1>
+                <div id="skill-icons" class="skill-icons">
+
+                </div>
+                <div class="skill-footer">
+                    <img src="./assets/img/icons/skill-footer.svg" alt=""><span data-i18n="skillsFooterText1">Don’t
+                        see the skill you need?</span><a href="#contact" data-i18n="skillsFooterLinkText">Contact
+                        me</a><span data-i18n="skillsFooterText2">I’m always ready to learn!</span>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="pfeil-bottom-right">
+                    <img src="./assets/img/pfeil-bottom-right.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="project-section scroll-down-indicator section-reveal reveal-from-left">
+            <div class="projects-content-wrapper">
+                <h1 class="--primary-h1" data-i18n="projectsHeadline">Portfolio</h1>
+                <p class="--font-family-overpass-regular --child-headline" data-i18n="projectHeadlinText">Explore a
+                    selection of my work here - Interact with projects to
+                    see my skills in action.</p>
+                <div id="project" class="projects-content"></div>
+            </div>
+        </section>
+        <section id="references" class="references-section scroll-down-indicator section-reveal reveal-from-right">
+            <div class="references-content-wrapper ">
+
+                <h1 class="--primary-h1" data-i18n="referencesHeadline">References</h1>
+
+                <p class="--font-family-overpass-regular --child-headline" data-i18n="referenceHeadlineText">I
+                    thrive both independently and as part of a team. Here’s what my colleagues have to say about
+                    working with me.</p>
+
+                <div id="reference-content" class="reference-content"></div>
+
+                <div class="pfeil-bottom-left">
+                    <img src="./assets/img/pfeil-bottom-left.svg" alt="">
+                </div>
+
+            </div>
+        </section>
+        <section id="contact" class="contact-section section-reveal reveal-from-bottom">
+            <div class="contact-banner-wrapper">
+                <div class="contact-banner"></div>
+            </div>
+            <div class="contact-content-header">
+                <div class="contact-wrapper">
+                    <h2 class="--primary-h1" data-i18n="sayHi">Say Hi!</h2>
+                    <span class="headlin-description" data-i18n="contactDescription">Want to discuss a new
+                        project?</span>
+                    <span class="--child-headline" data-i18n="contactDescriptionExtended">Say hello! let's discuss your
+                        ideas and make it happen</span>
+
+                    <div class="contact-form">
+                        <form action="scripts/mailto.php" method="post">
+
+                            <div class="field-with-icon">
+                                <label for="name"></label>
+                                <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input"
+                                    type="text" name="name" placeholder="Your Name" autocomplete="name"
+                                    aria-label="name" data-i18n-placeholder="namePlaceholder">
+                                <span class="field-status-icon" aria-hidden="true"></span>
+                            </div>
+
+                            <span id="error-message-name" class="error-message " data-i18n="errorNameRequired">Your name
+                                is required.</span>
+
+                            <div class="field-with-icon">
+                                <label for="email"></label>
+                                <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input"
+                                    type="email" name="email" placeholder="Your Email" autocomplete="email"
+                                    aria-label="email" data-i18n-placeholder="emailPlaceholder">
+                                <span class="field-status-icon" aria-hidden="true"></span>
+                            </div>
+
+                            <span id="error-message-email" class="error-message" data-i18n="errorEmailRequired">Your
+                                email is required.</span>
+                            <label for="message"></label>
+                            <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
+                                placeholder="Your Message" cols="5" rows="5" autocomplete="off" aria-label="message"
+                                data-i18n-placeholder="messagePlaceholder"></textarea>
+                            <span id="error-message-message" class="error-message "
+                                data-i18n="errorMessageRequired">Your message is required.</span>
+
+                            <button id="sendenButton" type="submit" class="--primary-light-button"
+                                data-i18n="sendMessage" disabled>Send Message</button>
+                            <div class="privecy-content">
+                                <label for="accept-privacy"></label>
+                                <input onchange="validatePrivacy()" id="accept-privacy" type="checkbox"
+                                    name="accept-privacy" value="checkbox1" aria-label="accept privacy policy">
+                                <span class="privacy-text --font-family-overpass-regular"><span
+                                        data-i18n="privacyText">I've read the</span>
+                                    <a class="--font-family-overpass-regular" href="./subpages/privacy-policy.html"
+                                        data-i18n="privacyPolicy">Privacy Policy</a> <span
+                                        data-i18n="privacyTextEnd">and agree to the processing of my data as
+                                        outlined.</span></span>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content-wrapper">
+                <div class="footer-left">
+                    <div class="logo">
+                        <div class="logo-content">
+                            <p class="first-before">[</p>
+                            <p class="first">M</p>
+                            <p class="logo-seperator">/</p>
+                            <p class="last">P</p>
+                            <p class="first-before">]</p>
+                        </div>
+                    </div>
+                    <p class="copyright">&copy; Maik Pankow 2026</p>
+                    <a class="footer-email" href="mailto:info@maikpankow.de">info@maikpankow.de</a>
+                    <div class="responsive-link-legal-notice">
+                        <a href="./subpages/legal-notice.html" data-i18n="footerLegalNotice">Legal Notice</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="back-to-top-content">
+                        <a href="#hero-section"><img src="./assets/img/icons/to-top.svg" alt="Back to Top"></a>
+                    </div>
+                    <div class="footer-icons">
+                        <a class="icon-links" href="https://github.com/Maik649" target="_blank"><img
+                                src="./assets/img/Githup-icon.svg" alt="Profile Picture GitHub"></a>
+                        <a class="icon-links" href="mailto:info@maikpankow.de"><img src="./assets/img/Mail-icon.svg"
+                                alt="Profile Picture Email"></a>
+                        <a class="icon-links" href="https://www.linkedin.com/in/maik-pankow-6aaba0376/"
+                            target="_blank"><img src="./assets/img/LinkedIn-icon.svg"
+                                alt="Profile Picture LinkedIn"></a>
+                    </div>
+                    <div class="footer-link-legal-notice">
+                        <a href="./subpages/legal-notice.html" data-i18n="footerLegalNotice">Legal Notice</a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <div id="status-modal" class="status-modal" aria-hidden="true">
+            <div class="status-modal__backdrop" data-close-status-modal="true"></div>
+            <div class="status-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="status-modal-title">
+                <button type="button" class="status-modal__close" aria-label="Close"
+                    data-close-status-modal="true">&times;</button>
+                <span id="status-modal-kicker" class="status-modal__kicker"></span>
+                <h2 id="status-modal-title" class="status-modal__title"></h2>
+                <p id="status-modal-message" class="status-modal__message"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
