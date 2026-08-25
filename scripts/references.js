@@ -30,7 +30,7 @@ function templateReference(ref) {
   const refPosition = langData[ref.positionKey] || ref.refPosition;
   const refText = langData[ref.textKey] || ref.refText;
   
-  return `<div class="reference-card">
+  return `<div class="reference-card" id="reference-card-${ref.id}">
             <p class="reference-quote">,,</p>
             <span class="reference-name">${refName}</span>
             <span class="reference-position --font-family-overpass-regular">${refPosition}</span>
@@ -45,16 +45,22 @@ function templateReference(ref) {
  */
 function initReferenceSlider() {
     const container = document.getElementById("reference-content");
-    const prevBtn = document.getElementById("refPrev");
-    const nextBtn = document.getElementById("refNext");
-    if (!container || !prevBtn || !nextBtn) return;
+  const radioButtons = document.querySelectorAll('input[name="reference-slide"]');
+ 
+  radioButtons.forEach((radioButton, index) => {
+    radioButton.addEventListener("change", () => {
+      const card = container.children[index];
+      if (!card) {
+        return;
+      }
 
-    prevBtn.addEventListener("click", () => {
-        container.scrollBy({ left: -container.clientWidth, behavior: "smooth" });
+      card.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
     });
-    nextBtn.addEventListener("click", () => {
-        container.scrollBy({ left: container.clientWidth, behavior: "smooth" });
-    });
+  });
 }
 
 const referenceData = [
