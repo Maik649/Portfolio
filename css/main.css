@@ -2815,13 +2815,24 @@ input[type=checkbox]:checked:hover {
   padding-right: 40px;
 }
 
+.contact-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--text-color-light);
+  font-size: 16px;
+  font-family: var(--font-family-overpass-regular);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
 .contact-form .field-with-icon:has(.--form-input:focus) label,
 .contact-form .field-with-icon:has(textarea:focus) label,
 .contact-form .field-with-icon:has(textarea:not(:placeholder-shown)) label,
 .contact-form .field-with-icon:has(.--form-input:not(:placeholder-shown)) label {
   outline: unset !important;
   border-bottom: unset !important;
-  margin-top: -25px;
+  margin-top: -30px;
   transition: all 0.3s ease;
 }
 

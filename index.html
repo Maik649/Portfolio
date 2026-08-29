@@ -203,7 +203,7 @@
                         <div class="field-with-icon">
                             <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input"
                                 type="text" name="name" autocomplete="name" aria-label="name" placeholder="">
-                            <label for="name" data-i18n-label="nameLabel">Dein Name</label>
+                            <label class="contact-label" for="name" data-i18n-label="nameLabel">Dein Name</label>
                             <span class="field-status-icon" aria-hidden="true"></span>
                         </div>
 
@@ -213,7 +213,7 @@
                         <div class="field-with-icon">
                             <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input"
                                 type="email" name="email" autocomplete="email" aria-label="email" placeholder="">
-                            <label for="email" data-i18n-label="emailPlaceholder">Deine E-Mail-Adresse</label>
+                            <label class="contact-label" for="email" data-i18n-label="emailPlaceholder">Deine E-Mail-Adresse</label>
                             <span class="field-status-icon" aria-hidden="true"></span>
                         </div>
                         <span id="error-message-email" class="error-message" data-i18n="errorEmailRequired">Your
@@ -222,7 +222,7 @@
                             <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
                                 placeholder="" cols="5" rows="5" autocomplete="off" aria-label="message"
                                 placeholder=""></textarea>
-                            <label for="message" data-i18n-label="messagePlaceholder">Ihre Nachricht</label>
+                            <label class="contact-label" for="message" data-i18n-label="messagePlaceholder">Ihre Nachricht</label>
                         </div>
                             <span id="error-message-message" class="error-message " data-i18n="errorMessageRequired">Your
                                 message is required.</span>
