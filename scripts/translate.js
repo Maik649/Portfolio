@@ -98,7 +98,7 @@ function updateLanguageButtons() {
 function renderTemplate() {
   const languageData = translationMap[currentLanguage] || {};
   const translatableElements = document.querySelectorAll("[data-i18n]");
-  const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
+  const placeholderElements = document.querySelectorAll("[data-i18n-label]");
   const ariaLabelElements = document.querySelectorAll("[data-i18n-aria-label]");
   const titleElements = document.querySelectorAll("[data-i18n-title]");
 
@@ -112,11 +112,11 @@ function renderTemplate() {
   });
 
   placeholderElements.forEach((element) => {
-    const key = element.dataset.i18nPlaceholder;
+    const key = element.dataset.i18nLabel;
     const translatedText = languageData[key];
 
     if (typeof translatedText === "string") {
-      element.setAttribute("placeholder", translatedText);
+      element.textContent = translatedText;
     }
   });
 
