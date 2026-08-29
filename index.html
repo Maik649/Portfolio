@@ -109,19 +109,19 @@
                 <h1 id="headline-about-me" class="--primary-h1" data-i18n="headline"></h1>
                 <article id="infos" class="infotext" data-i18n="text">
 
-                    </article>
-                    <div class="extra-info">
-                        <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in
-                                Berlin</span></span>
-                        <span class="icons"><img src="./assets/img/laptop_chromebook.svg" alt=""><span
-                                data-i18n="remote">open to work Remote</span></span>
-                    </div>
-                    <a class="--primary-button --margin-left" href="#contact" data-i18n="letsTalk">Let's Talk</a>
+                </article>
+                <div class="extra-info">
+                    <span class="icons"><img src="./assets/img/house.svg" alt=""><span data-i18n="location">Base in
+                            Berlin</span></span>
+                    <span class="icons"><img src="./assets/img/laptop_chromebook.svg" alt=""><span
+                            data-i18n="remote">open to work Remote</span></span>
                 </div>
-                <div class="about-content-right">
-                    <span class="portrait-wrapper">
-                        <img class="portrait" src="./assets/img/portfolio_new.png" alt="portrait">
-                    </span>
+                <a class="--primary-button --margin-left" href="#contact" data-i18n="letsTalk">Let's Talk</a>
+            </div>
+            <div class="about-content-right">
+                <span class="portrait-wrapper">
+                    <img class="portrait" src="./assets/img/portfolio_new.png" alt="portrait">
+                </span>
 
 
                 <div class="pfeil-bottom-left">
@@ -169,12 +169,12 @@
                 working with me.</p>
 
             <div class="slider-wrapper">
-               
+
                 <div id="reference-content" class="reference-content"></div>
-               
-                 <div class="slider-dots">
-                     <label><input type="radio" name="reference-slide" id="reference-slide-1" checked></label>
-                     <label ><input type="radio" name="reference-slide" id="reference-slide-2"></label>
+
+                <div class="slider-dots">
+                    <label><input type="radio" name="reference-slide" id="reference-slide-1" checked></label>
+                    <label><input type="radio" name="reference-slide" id="reference-slide-2"></label>
                     <label><input type="radio" name="reference-slide" id="reference-slide-3"></label>
                 </div>
             </div>
@@ -201,10 +201,9 @@
                     <form action="./scripts/mailto.php" method="post">
 
                         <div class="field-with-icon">
-                            <label for="name"></label>
                             <input onchange="validateName(); checkFormValidity()" id="name" class="--form-input"
-                                type="text" name="name" placeholder="Your Name" autocomplete="name" aria-label="name"
-                                data-i18n-placeholder="namePlaceholder">
+                                type="text" name="name" autocomplete="name" aria-label="name" placeholder="">
+                            <label for="name" data-i18n-placeholder="namePlaceholder">Dein Name</label>
                             <span class="field-status-icon" aria-hidden="true"></span>
                         </div>
 
@@ -212,21 +211,21 @@
                             is required.</span>
 
                         <div class="field-with-icon">
-                            <label for="email"></label>
                             <input onchange="validateEmail(); checkFormValidity()" id="email" class="--form-input"
-                                type="email" name="email" placeholder="Your Email" autocomplete="email"
-                                aria-label="email" data-i18n-placeholder="emailPlaceholder">
+                                type="email" name="email" autocomplete="email" aria-label="email" placeholder="">
+                            <label for="email" data-i18n-placeholder="emailPlaceholder">Deine E-Mail-Adresse</label>
                             <span class="field-status-icon" aria-hidden="true"></span>
                         </div>
-
                         <span id="error-message-email" class="error-message" data-i18n="errorEmailRequired">Your
-                            email is required.</span>
-                        <label for="message"></label>
-                        <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
-                            placeholder="Your Message" cols="5" rows="5" autocomplete="off" aria-label="message"
-                            data-i18n-placeholder="messagePlaceholder"></textarea>
-                        <span id="error-message-message" class="error-message " data-i18n="errorMessageRequired">Your
-                            message is required.</span>
+                        email is required.</span>
+                        <div class="field-with-icon">
+                            <textarea onchange="validateMessage(); checkFormValidity()" id="message" name="message"
+                                placeholder="" cols="5" rows="5" autocomplete="off" aria-label="message"
+                                placeholder=""></textarea>
+                            <label for="message" data-i18n-placeholder="messagePlaceholder">Ihre Nachricht</label>
+                        </div>
+                            <span id="error-message-message" class="error-message " data-i18n="errorMessageRequired">Your
+                                message is required.</span>
 
                         <button id="sendenButton" type="submit" class="--primary-light-button" data-i18n="sendMessage"
                             disabled>Send Message</button>

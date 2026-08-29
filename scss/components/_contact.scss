@@ -89,7 +89,7 @@
 }
 
 .contact-form {
-    padding: 0 50px 50px 50px;
+    padding: 30px 50px 50px 50px;
 }
 
 form {
@@ -135,22 +135,11 @@ textarea:focus {
     margin: 0;
 }
 
-input {
-    background-color: black;
-    border: unset;
-    outline: unset;
-    border-bottom: 2px solid white;
-    color: var(--text-color-light);
-    font-size: 16px;
-    font-family: var(--font-family-overpass-regular);
-}
-
 input[type="text"]:hover,
 input[type="email"]:hover {
     background-color: black;
-    border: unset;
+    border: 2px solid white;
     outline: unset;
-    outline: 4px solid white;
     color: var(--text-color-light);
     font-size: 16px;
     font-family: var(--font-family-overpass-regular);
@@ -158,9 +147,8 @@ input[type="email"]:hover {
 
 textarea:hover {
     background-color: black;
-    border: unset;
+    border: 2px solid white;
     outline: unset;
-    outline: 4px solid white;
     color: var(--text-color-light);
     padding: none;
     font-size: 16px;
@@ -260,10 +248,14 @@ input[type="checkbox"]:checked:hover {
     padding-right: 40px;
 }
 
-.contact-form .field-with-icon .--form-input:active,
-.contact-form .field-with-icon .--form-input:focus {
-    outline: 2px solid white !important;
+.contact-form .field-with-icon:has(.--form-input:focus) label,
+.contact-form .field-with-icon:has(textarea:focus) label,
+.contact-form .field-with-icon:has(textarea:not(:placeholder-shown)) label,
+.contact-form .field-with-icon:has(.--form-input:not(:placeholder-shown)) label {
+    outline: unset !important;
     border-bottom: unset !important;
+    margin-top: -25px;
+    transition: all 0.3s ease;
 }
 
 .contact-form .field-with-icon .field-status-icon {
