@@ -235,17 +235,6 @@
   color: var(--secondary-color);
 }
 
-label {
-  align-items: center;
-  height: 100%;
-  font-size: 16px;
-  color: white;
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 13px;
-  transition: all 0.3s ease;
-}
-
 .--form-input {
   width: 600px;
   height: 40px;
