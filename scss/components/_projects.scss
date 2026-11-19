@@ -281,6 +281,14 @@
         opacity: 1;
         transform: none;
     }
+
+    .button-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: calc(100% - 40px);
+    }
 }
 
 @media only screen and (min-width:769px) and (max-width:1024px) {
