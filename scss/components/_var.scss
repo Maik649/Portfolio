@@ -180,7 +180,7 @@
     color: var(--text-color);
     border: none;
     height: 55px;
-    width: 250px;
+    min-width: 190px;
     padding: 12px 20px 0 20px;
     cursor: pointer;
     font-size: 23px;
@@ -197,7 +197,7 @@
     color: var(--text-color-light);
     border: none;
     height: 55px;
-    width: 250px;
+    max-width: 250px;
     padding: 12px 20px 0 20px;
     cursor: pointer;
     font-size: 23px;
@@ -211,6 +211,7 @@
 
 .--primary-light-button:hover {
     width: 270px;
+    padding: 12px 25px 0 25px;
     font-weight: var(--font-weight-bold);
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -219,7 +220,8 @@
 }
 
 .--primary-button:hover {
-    width: 270px;
+    max-width: 270px;
+    padding: 12px 25px 0 25px;
     font-weight: var(--font-weight-bold);
 }
 
@@ -265,6 +267,7 @@
     font-size: 16px;
     font-family: var(--font-family-overpass-regular);
 }
+
 .--form-input:focus+label,
 .--form-input:not(:placeholder-shown)+label {
     outline: 2px solid white !important;

@@ -80,18 +80,18 @@
 
 .project-content-right {
     display: flex;
-    opacity: 0;
+    opacity: 1;
     transform: translateX(10px);
     flex-direction: column;
     gap: 20px;
     width: min(500px, 100%);
     transition: opacity 0.255s ease, transform 0.255s ease;
+    justify-content: center;
 }
 
 .project-content-right.is-visible {
-    justify-content: center;
     opacity: 1;
-    transform: translateX(0);
+    // transform: translateX(20px);
 }
 
 .project-content-right h2 {
@@ -162,7 +162,7 @@
 
 .button-content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 20px;
     width: calc(100% - 40px);
 }

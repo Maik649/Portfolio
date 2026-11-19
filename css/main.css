@@ -164,7 +164,7 @@
   color: var(--text-color);
   border: none;
   height: 55px;
-  width: 250px;
+  min-width: 190px;
   padding: 12px 20px 0 20px;
   cursor: pointer;
   font-size: 23px;
@@ -181,7 +181,7 @@
   color: var(--text-color-light);
   border: none;
   height: 55px;
-  width: 250px;
+  max-width: 250px;
   padding: 12px 20px 0 20px;
   cursor: pointer;
   font-size: 23px;
@@ -195,6 +195,7 @@
 
 .--primary-light-button:hover {
   width: 270px;
+  padding: 12px 25px 0 25px;
   font-weight: var(--font-weight-bold);
   background-color: var(--primary-color);
   color: var(--text-color);
@@ -203,7 +204,8 @@
 }
 
 .--primary-button:hover {
-  width: 270px;
+  max-width: 270px;
+  padding: 12px 25px 0 25px;
   font-weight: var(--font-weight-bold);
 }
 
@@ -2272,18 +2274,17 @@ input[type=radio]:checked {
 
 .project-content-right {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(10px);
   flex-direction: column;
   gap: 20px;
   width: min(500px, 100%);
   transition: opacity 0.255s ease, transform 0.255s ease;
+  justify-content: center;
 }
 
 .project-content-right.is-visible {
-  justify-content: center;
   opacity: 1;
-  transform: translateX(0);
 }
 
 .project-content-right h2 {
@@ -2351,7 +2352,7 @@ input[type=radio]:checked {
 }
 .button-content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 20px;
   width: calc(100% - 40px);
 }
